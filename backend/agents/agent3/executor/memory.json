@@ -1,0 +1,805 @@
+[
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 44,
+      "soil_temp": 34,
+      "air_temp": 18.7,
+      "humidity": 36,
+      "soil_ph": 6.0,
+      "nitrogen": 53,
+      "phosphorus": 38,
+      "potassium": 45
+    },
+    "plan": "Based on the farm data, I would recommend the following actions:\n\n[\"irrigation\", \"fertilizer\"]\n\nThe soil moisture level is 44, which indicates that the soil is slightly dry. Irrigation would be necessary to maintain optimal moisture levels for wheat growth.\n\nAdditionally, the nitrogen level is 53, which suggests that it may not be sufficient for optimal plant growth. Applying fertilizer could help increase the nitrogen levels and promote healthy crop development.\n\nNote: I did not recommend pest control or temperature adjustment as there are no indications of pests or temperature-related issues in the provided data.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "NPK levels adequate \u2192 Maintain balanced fertilization.",
+      "temperature": "Temperature optimal for crop growth."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 38,
+      "soil_temp": 28,
+      "air_temp": 18.7,
+      "humidity": 36,
+      "soil_ph": 7.1,
+      "nitrogen": 36,
+      "phosphorus": 37,
+      "potassium": 50
+    },
+    "plan": "Based on the farm data, I would recommend the following actions:\n\n['irrigation', 'fertilizer']\n\nThis is because the soil moisture level is relatively low at 38%, indicating that the crop may be experiencing some water stress. Irrigation would help to alleviate this stress.\n\nAdditionally, the nitrogen and phosphorus levels are slightly below average, which could impact the overall health of the wheat crop. Fertilization would help to replenish these essential nutrients.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "Low Nitrogen \u2192 Apply nitrogen-rich fertilizer."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 23,
+      "soil_temp": 32,
+      "air_temp": 18.7,
+      "humidity": 74,
+      "soil_ph": 7.1,
+      "nitrogen": 77,
+      "phosphorus": 39,
+      "potassium": 47
+    },
+    "plan": "Based on the given farm data, I would recommend the following actions:\n\n[\"irrigation\"]\n\nThe soil moisture level is 23, which indicates that the soil may be too dry for optimal wheat growth. Irrigation can help to increase the soil moisture levels and support healthy crop development.",
+    "result": {
+      "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 44,
+      "soil_temp": 25,
+      "air_temp": 18.7,
+      "humidity": 30,
+      "soil_ph": 6.9,
+      "nitrogen": 64,
+      "phosphorus": 28,
+      "potassium": 36
+    },
+    "plan": "Based on the farm data, I would recommend the following actions:\n\n[\"irrigation\"]\n\nThe soil moisture level is 44, which indicates that the soil may be too dry for optimal wheat growth. Irrigating the field can help to improve soil moisture and promote healthy crop development.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 22,
+      "soil_temp": 33,
+      "air_temp": 18.7,
+      "humidity": 43,
+      "soil_ph": 5.6,
+      "nitrogen": 61,
+      "phosphorus": 49,
+      "potassium": 20
+    },
+    "plan": "Based on the farm data, I would recommend the following actions:\n\n['irrigation']\n\nThe soil moisture level is 22, which is below the optimal range. Irrigation would help to bring it up to an ideal level for wheat growth.\n\nNo fertilizer or pest control actions are needed based on the provided data, and temperature control is not necessary since air temp (18.7\u00b0C) is within a suitable range for wheat.",
+    "result": {
+      "irrigation": "Soil is dry \u2192 Increase irrigation immediately.",
+      "fertilizer": "Soil acidic \u2192 Add lime and balanced fertilizer.",
+      "temperature": "Temperature optimal for crop growth."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 20,
+      "soil_temp": 26,
+      "air_temp": 18.7,
+      "humidity": 85,
+      "soil_ph": 6.9,
+      "nitrogen": 69,
+      "phosphorus": 29,
+      "potassium": 29
+    },
+    "plan": "Based on the farm data, I would recommend:\n\n['irrigation']\n\nThe soil moisture level is only 20, which may not be sufficient for optimal wheat growth. Irrigation could help to improve the soil moisture and support healthy plant development.\n\nNo other actions are necessary based on the provided data.",
+    "result": {
+      "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 27,
+      "soil_temp": 32,
+      "air_temp": 18.7,
+      "humidity": 55,
+      "soil_ph": 6.8,
+      "nitrogen": 71,
+      "phosphorus": 28,
+      "potassium": 36
+    },
+    "plan": "Based on the farm data, I would recommend the following actions:\n\n['irrigation']\n\nThe soil moisture level is 27, which is relatively low. Irrigating the wheat field to bring the soil moisture level up to optimal levels could be beneficial for the crop's growth and development.",
+    "result": {
+      "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 28,
+      "soil_temp": 26,
+      "air_temp": 18.7,
+      "humidity": 36,
+      "soil_ph": 5.9,
+      "nitrogen": 67,
+      "phosphorus": 50,
+      "potassium": 25
+    },
+    "plan": "Based on the farm data, I would recommend:\n\n[\"irrigation\"]\n\nThe soil moisture level is 28, which is relatively low. Irrigation would help to increase the soil moisture and ensure that the wheat crop receives enough water for optimal growth.",
+    "result": {
+      "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 54,
+      "soil_temp": 25,
+      "air_temp": 18.7,
+      "humidity": 87,
+      "soil_ph": 6.1,
+      "nitrogen": 58,
+      "phosphorus": 26,
+      "potassium": 49
+    },
+    "plan": "Based on the given farm data, I would recommend the following actions:\n\n['irrigation']\n\nExplanation: The soil moisture level is 54, which suggests that the soil may be slightly dry. Since wheat requires a certain level of soil moisture for optimal growth, irrigation might be necessary to ensure the crop receives enough water.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 40,
+      "soil_temp": 31,
+      "air_temp": 18.7,
+      "humidity": 53,
+      "soil_ph": 5.7,
+      "nitrogen": 60,
+      "phosphorus": 48,
+      "potassium": 42
+    },
+    "plan": "Based on the provided farm data, I would recommend the following actions:\n\n[\"fertilizer\"]\n\nThe soil moisture level is 40, which indicates that the soil is slightly dry. Since nitrogen levels are relatively high at 60, it's likely that the crop doesn't require additional fertilizer for this nutrient. However, phosphorus levels are lower at 48, and potassium levels are also relatively low at 42. Considering these levels, I recommend applying a balanced fertilizer to replenish these essential nutrients.",
+    "result": {
+      "fertilizer": "Soil acidic \u2192 Add lime and balanced fertilizer."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 28,
+      "soil_temp": 20,
+      "air_temp": 18.7,
+      "humidity": 88,
+      "soil_ph": 6.1,
+      "nitrogen": 43,
+      "phosphorus": 46,
+      "potassium": 25
+    },
+    "plan": "Based on the farm data, I would recommend:\n\n[\"irrigation\"]\n\nThe soil moisture level is 28, which is relatively low. Wheat requires a consistent and adequate water supply to grow well, so irrigation is necessary to raise the soil moisture level.",
+    "result": {
+      "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 32,
+      "soil_temp": 25,
+      "air_temp": 18.7,
+      "humidity": 59,
+      "soil_ph": 6.0,
+      "nitrogen": 58,
+      "phosphorus": 48,
+      "potassium": 26
+    },
+    "plan": "Based on the farm data, here's my recommendation:\n\n['irrigation', 'fertilizer']\n\nExplanation: \n\n1. Irrigation: The soil moisture level is 32, which is slightly below the optimal level for wheat growth (around 40-50%). Providing irrigation would help maintain a healthy moisture level.\n2. Fertilizer: The nitrogen and phosphorus levels are adequate but potassium is low at 26. Adding potassium-rich fertilizers could help improve overall soil fertility.\n\nNote that I haven't suggested pest control or temperature adjustments as the current data doesn't indicate any significant issues with pests or extreme temperatures.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "Low Potassium \u2192 Add potash fertilizer.",
+      "temperature": "Temperature optimal for crop growth."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 52,
+      "soil_temp": 25,
+      "air_temp": 18.7,
+      "humidity": 84,
+      "soil_ph": 5.9,
+      "nitrogen": 77,
+      "phosphorus": 48,
+      "potassium": 38
+    },
+    "plan": "Based on the provided farm data, I would recommend the following actions:\n\n['irrigation', 'fertilizer']\n\nThis is because the soil moisture level (52) is relatively low, indicating that the crop may be experiencing water stress. Irrigation can help to alleviate this issue.\n\nAdditionally, the nitrogen levels are quite high (77), which could potentially lead to excessive plant growth and reduced yields if not managed properly. Fertilizing with a balanced fertilizer can help to promote healthy plant growth while also reducing excess nutrient levels in the soil.\n\nNo other actions such as pest control or temperature adjustments seem necessary based on the provided data.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "Soil acidic \u2192 Add lime and balanced fertilizer.",
+      "temperature": "Temperature optimal for crop growth."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 39,
+      "soil_temp": 26,
+      "air_temp": 18.7,
+      "humidity": 79,
+      "soil_ph": 6.2,
+      "nitrogen": 80,
+      "phosphorus": 36,
+      "potassium": 46
+    },
+    "plan": "Based on the farm data, I would recommend the following actions:\n\n[\"irrigation\"]\n\nThe soil moisture level is 39, which is relatively low. Irrigating the field to bring it up to an optimal level will help ensure healthy plant growth and prevent stress due to water scarcity.\n\nNote: No fertilizer or pest control action is needed based on the provided data.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "NPK levels adequate \u2192 Maintain balanced fertilization."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 32,
+      "soil_temp": 28,
+      "air_temp": 18.7,
+      "humidity": 44,
+      "soil_ph": 7.3,
+      "nitrogen": 66,
+      "phosphorus": 29,
+      "potassium": 26
+    },
+    "plan": "Based on the given farm data, I recommend the following actions:\n\n['irrigation', 'fertilizer']\n\nThe soil moisture level is 32, which suggests that some irrigation might be necessary to bring it up to a more optimal range. Additionally, the nitrogen levels are relatively high at 66, indicating that fertilizer application may be beneficial for the wheat crop.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "Low Phosphorus \u2192 Add phosphate fertilizer."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 55,
+      "soil_temp": 31,
+      "air_temp": 18.5,
+      "humidity": 39,
+      "soil_ph": 6.9,
+      "nitrogen": 30,
+      "phosphorus": 45,
+      "potassium": 39
+    },
+    "plan": "Based on the farm data, I would recommend:\n\n['irrigation', 'fertilizer']\n\nThe soil moisture level is 55%, which is above average but still slightly dry. Irrigation can help maintain optimal moisture levels for wheat growth.\n\nAdditionally, the nitrogen and phosphorus levels are below average (30 and 45 respectively), indicating a need for fertilization to support healthy plant growth.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "Low Nitrogen \u2192 Apply nitrogen-rich fertilizer."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 60,
+      "soil_temp": 33,
+      "air_temp": 18.5,
+      "humidity": 65,
+      "soil_ph": 7.0,
+      "nitrogen": 54,
+      "phosphorus": 31,
+      "potassium": 22
+    },
+    "plan": "Based on the farm data, I would recommend:\n\n[\"irrigation\"]\n\nThe soil moisture level is 60, which indicates that the soil needs to be irrigated. Wheat requires around 50-70% soil moisture for optimal growth. The current soil moisture level is above this range, indicating a need for irrigation to reduce the risk of overwatering and root rot.\n\nNo fertilizer or pest control are needed at this time as the nutrient levels (nitrogen, phosphorus, potassium) seem suitable for wheat growth, and there doesn't appear to be any pest issues based on the given data.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "Low Potassium \u2192 Add potash fertilizer."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 59,
+      "soil_temp": 22,
+      "air_temp": 18.5,
+      "humidity": 33,
+      "soil_ph": 7.2,
+      "nitrogen": 70,
+      "phosphorus": 31,
+      "potassium": 28
+    },
+    "plan": "Based on the farm data, I would recommend the following actions:\n\n[\"irrigation\"]\n\nThe soil moisture level is 59, which is relatively low. Irrigation would help to replenish the soil's water supply and support healthy plant growth.\n\nNo other actions are necessary based on this data. The air temperature, soil temperature, humidity, and pH levels all seem to be within a suitable range for wheat growth, and there don't appear to be any issues with nitrogen, phosphorus, or potassium levels that would require fertilizer application.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "Low Potassium \u2192 Add potash fertilizer.",
+      "temperature": "Temperature optimal for crop growth."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 31,
+      "soil_temp": 21,
+      "air_temp": 18.5,
+      "humidity": 80,
+      "soil_ph": 6.4,
+      "nitrogen": 45,
+      "phosphorus": 24,
+      "potassium": 23
+    },
+    "plan": "Based on the provided farm data, here are the necessary actions:\n\n['irrigation']\n\nThe soil moisture level is 31, which indicates that the soil needs to be irrigated to ensure optimal growing conditions for the wheat crop.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 20,
+      "soil_temp": 23,
+      "air_temp": 18.5,
+      "humidity": 86,
+      "soil_ph": 6.4,
+      "nitrogen": 34,
+      "phosphorus": 49,
+      "potassium": 32
+    },
+    "plan": "Based on the farm data, I recommend:\n\n['irrigation']\n\nThe soil moisture level is 20, which indicates that the soil needs irrigation to maintain optimal conditions for wheat growth.",
+    "result": {
+      "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 22,
+      "soil_temp": 32,
+      "air_temp": 18.5,
+      "humidity": 65,
+      "soil_ph": 7.2,
+      "nitrogen": 36,
+      "phosphorus": 25,
+      "potassium": 33
+    },
+    "plan": "Based on the farm data, I would recommend:\n\n['irrigation']\n\nThe soil moisture level is 22, which suggests that the crop might be water-stressed. Irrigation can help to improve the moisture levels and support plant growth.",
+    "result": {
+      "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 37,
+      "soil_temp": 22,
+      "air_temp": 18.5,
+      "humidity": 33,
+      "soil_ph": 6.3,
+      "nitrogen": 60,
+      "phosphorus": 49,
+      "potassium": 38
+    },
+    "plan": "Based on the farm data, I would recommend the following actions:\n\n['irrigation']\n\nThe soil moisture level is 37, which is slightly below the optimal range for wheat growth. Therefore, irrigation is necessary to maintain a healthy soil moisture level.\n\nNo other actions are required based on the provided data.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 52,
+      "soil_temp": 27,
+      "air_temp": 18.5,
+      "humidity": 44,
+      "soil_ph": 7.5,
+      "nitrogen": 36,
+      "phosphorus": 39,
+      "potassium": 20
+    },
+    "plan": "Based on the given farm data, I would recommend the following actions:\n\n['irrigation', 'fertilizer']\n\nThe soil moisture is at 52%, which indicates that the soil is slightly dry. Irrigation would be necessary to maintain optimal moisture levels for wheat growth.\n\nAdditionally, the nitrogen level is relatively low at 36. Applying fertilizer (specifically nitrogen-based) would help improve the crop's health and productivity.\n\nNo other actions are needed based on the provided data.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "Low Nitrogen \u2192 Apply nitrogen-rich fertilizer."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 21,
+      "soil_temp": 33,
+      "air_temp": 18.5,
+      "humidity": 34,
+      "soil_ph": 5.9,
+      "nitrogen": 69,
+      "phosphorus": 43,
+      "potassium": 37
+    },
+    "plan": "Based on the given farm data, I would recommend the following actions:\n\n['irrigation', 'fertilizer']\n\nThe soil moisture level is 21, which indicates that the soil may be slightly dry. Therefore, irrigation is necessary to ensure proper growth of the wheat crop.\n\nAdditionally, the nitrogen level is relatively high at 69, but phosphorus and potassium levels are moderate at 43 and 37 respectively. This suggests that fertilizer application might be beneficial to promote healthy plant growth.",
+    "result": {
+      "irrigation": "Soil is dry \u2192 Increase irrigation immediately.",
+      "fertilizer": "Soil acidic \u2192 Add lime and balanced fertilizer."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 44,
+      "soil_temp": 27,
+      "air_temp": 18.5,
+      "humidity": 55,
+      "soil_ph": 7.4,
+      "nitrogen": 50,
+      "phosphorus": 45,
+      "potassium": 23
+    },
+    "plan": "Based on the farm data, I would recommend:\n\n[\"irrigation\"]\n\nThe soil moisture level is 44, which indicates that the soil is relatively dry. Irrigation can help to bring the soil moisture up to an optimal level for wheat growth.\n\nNo other actions are necessary based on the provided data.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 56,
+      "soil_temp": 23,
+      "air_temp": 18.5,
+      "humidity": 55,
+      "soil_ph": 6.0,
+      "nitrogen": 58,
+      "phosphorus": 21,
+      "potassium": 27
+    },
+    "plan": "Based on the farm data, I recommend:\n\n['irrigation', 'fertilizer']\n\nHere's why:\n\n* Soil moisture is 56, which is relatively high but not ideal for wheat. Irrigation can help reduce this level to an optimal range.\n* Nitrogen levels are lower than ideal (58), suggesting that fertilizer application may be necessary to support healthy crop growth.\n\nNo temperature action is needed since the air and soil temperatures are within a suitable range. Pest control might not be necessary at this stage, as the data doesn't indicate any pest pressure.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "Low Phosphorus \u2192 Add phosphate fertilizer.",
+      "temperature": "Temperature optimal for crop growth."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 29,
+      "soil_temp": 26,
+      "air_temp": 18.5,
+      "humidity": 46,
+      "soil_ph": 5.8,
+      "nitrogen": 63,
+      "phosphorus": 25,
+      "potassium": 44
+    },
+    "plan": "Based on the given farm data, I would recommend the following actions:\n\n['irrigation']\n\nThe soil moisture level is 29, which indicates that the soil may be slightly dry. Irrigation can help to replenish the soil's water supply and maintain optimal conditions for plant growth.",
+    "result": {
+      "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 59,
+      "soil_temp": 22,
+      "air_temp": 18.5,
+      "humidity": 36,
+      "soil_ph": 6.9,
+      "nitrogen": 54,
+      "phosphorus": 25,
+      "potassium": 25
+    },
+    "plan": "Based on the farm data, I recommend the following actions:\n\n[\"irrigation\"]\n\nThe soil moisture level is 59, which is relatively high. This suggests that irrigation might not be necessary at this time. However, if we're planning ahead for future water needs or to prevent waterlogging, it's better to err on the side of caution and plan for some irrigation.\n\nNo other actions (fertilizer, pest control, temperature) seem necessary based on these data.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "Low Phosphorus \u2192 Add phosphate fertilizer.",
+      "temperature": "Temperature optimal for crop growth."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 33,
+      "soil_temp": 29,
+      "air_temp": 18.5,
+      "humidity": 46,
+      "soil_ph": 5.7,
+      "nitrogen": 33,
+      "phosphorus": 23,
+      "potassium": 49
+    },
+    "plan": "Based on the provided farm data, I would recommend the following actions:\n\n[\"irrigation\"]\n\nThe soil moisture level is 33%, which is below the optimal range for wheat growth. Irrigation is necessary to ensure proper water supply and prevent stress in the crop.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 41,
+      "soil_temp": 23,
+      "air_temp": 18.5,
+      "humidity": 45,
+      "soil_ph": 6.4,
+      "nitrogen": 80,
+      "phosphorus": 43,
+      "potassium": 44
+    },
+    "plan": "Based on the farm data, I would recommend the following actions:\n\n[\"irrigation\"]\n\nThe soil moisture level is 41, which indicates that the soil is slightly dry. Irrigation will help to bring the soil moisture levels back up to an optimal range, ensuring proper growth and development of the wheat crop.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 37,
+      "soil_temp": 29,
+      "air_temp": 18.5,
+      "humidity": 57,
+      "soil_ph": 6.3,
+      "nitrogen": 57,
+      "phosphorus": 23,
+      "potassium": 42
+    },
+    "plan": "Based on the provided farm data, the necessary actions would be:\n\n[\"irrigation\"]\n\nReason: The soil moisture level is 37, which indicates that the soil is dry and may require irrigation to ensure optimal growth conditions for the wheat crop.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 45,
+      "soil_temp": 27,
+      "air_temp": 18.5,
+      "humidity": 77,
+      "soil_ph": 5.6,
+      "nitrogen": 30,
+      "phosphorus": 25,
+      "potassium": 45
+    },
+    "plan": "Based on the farm data, I would recommend the following actions:\n\n[\"irrigation\"]\n\nThe soil moisture level is at 45, which indicates that the soil may be slightly dry. Irrigation can help to bring the soil moisture level back up to an optimal range for wheat growth.\n\nNote: No fertilizer or pest control actions are recommended based on this data.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "Soil acidic \u2192 Add lime and balanced fertilizer."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 21,
+      "soil_temp": 34,
+      "air_temp": 18.5,
+      "humidity": 39,
+      "soil_ph": 5.8,
+      "nitrogen": 63,
+      "phosphorus": 26,
+      "potassium": 35
+    },
+    "plan": "Based on the farm data, I would recommend the following actions:\n\n[\"irrigation\"]\n\nThe soil moisture level is 21, which indicates that the soil may be too dry for optimal wheat growth. Therefore, irrigation is necessary to ensure proper moisture levels.\n\nNote: No fertilizer, pest control, or temperature action is recommended based on this data.",
+    "result": {
+      "irrigation": "Soil is dry \u2192 Increase irrigation immediately.",
+      "fertilizer": "Soil acidic \u2192 Add lime and balanced fertilizer.",
+      "temperature": "Temperature optimal for crop growth."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 56,
+      "soil_temp": 21,
+      "air_temp": 18.5,
+      "humidity": 84,
+      "soil_ph": 6.4,
+      "nitrogen": 56,
+      "phosphorus": 42,
+      "potassium": 23
+    },
+    "plan": "Based on the farm data, I recommend the following actions:\n\n['irrigation', 'fertilizer']\n\nExplanation: \n\n1. Irrigation: The soil moisture level is 56, which is slightly above average (typically considered to be around 50). However, since wheat requires adequate moisture for optimal growth, it's a good idea to irrigate the field to maintain the soil moisture levels.\n2. Fertilizer: The nitrogen levels are satisfactory at 56, but phosphorus and potassium levels could be improved. Providing a balanced fertilizer that includes phosphorus and potassium would help promote healthy plant growth.\n\nI did not recommend pest control or temperature adjustments because there is no indication of pest infestation or extreme temperatures that require attention.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "Low Potassium \u2192 Add potash fertilizer.",
+      "temperature": "Temperature optimal for crop growth."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 54,
+      "soil_temp": 25,
+      "air_temp": 18.5,
+      "humidity": 86,
+      "soil_ph": 6.9,
+      "nitrogen": 76,
+      "phosphorus": 23,
+      "potassium": 24
+    },
+    "plan": "Based on the given farm data, I recommend the following actions:\n\n['irrigation']\n\nThe soil moisture level is 54, which indicates that the soil is somewhat dry. Irrigation would be necessary to maintain optimal soil moisture levels for wheat growth.\n\nNo other actions (fertilizer, pest control, or temperature adjustment) are recommended based on this data.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "Low Phosphorus \u2192 Add phosphate fertilizer.",
+      "temperature": "Temperature optimal for crop growth."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 23,
+      "soil_temp": 33,
+      "air_temp": 18.5,
+      "humidity": 72,
+      "soil_ph": 6.4,
+      "nitrogen": 32,
+      "phosphorus": 22,
+      "potassium": 27
+    },
+    "plan": "Based on the farm data, I recommend the following actions:\n\n['irrigation', 'fertilizer']\n\nThe soil moisture level is relatively low (23), which suggests that irrigation may be necessary to maintain optimal growing conditions. Additionally, the nitrogen and phosphorus levels are slightly below average (32 and 22, respectively), indicating a potential need for fertilizer application.",
+    "result": {
+      "irrigation": "Soil is dry \u2192 Increase irrigation immediately.",
+      "fertilizer": "Low Nitrogen \u2192 Apply nitrogen-rich fertilizer."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 37,
+      "soil_temp": 33,
+      "air_temp": 18.5,
+      "humidity": 46,
+      "soil_ph": 5.8,
+      "nitrogen": 31,
+      "phosphorus": 29,
+      "potassium": 25
+    },
+    "plan": "Based on the given farm data, I would recommend:\n\n[\"irrigation\"]\n\nThe soil moisture level is 37, which is relatively low. Wheat crops require a moderate to high level of moisture for optimal growth. Therefore, irrigation is necessary to ensure the crop gets enough water.\n\nNo other actions are required at this time based on the provided data.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 43,
+      "soil_temp": 20,
+      "air_temp": 18.4,
+      "humidity": 41,
+      "soil_ph": 6.5,
+      "nitrogen": 79,
+      "phosphorus": 29,
+      "potassium": 40
+    },
+    "plan": "Based on the farm data, I would recommend the following actions:\n\n['irrigation']\n\nThe soil moisture level is 43, which indicates that the soil needs some watering. A suitable irrigation plan would help to maintain an optimal moisture level for healthy wheat growth.\n\nNo other actions (fertilizer, pest control, or temperature adjustment) are necessary based on the provided data.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "Low Phosphorus \u2192 Add phosphate fertilizer.",
+      "temperature": "Temperature optimal for crop growth."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 47,
+      "soil_temp": 27,
+      "air_temp": 18.4,
+      "humidity": 52,
+      "soil_ph": 6.9,
+      "nitrogen": 59,
+      "phosphorus": 31,
+      "potassium": 50
+    },
+    "plan": "Based on the farm data, I would recommend the following actions:\n\n[\"irrigation\"]\n\nThe soil moisture level is 47, which is relatively low. Irrigation is necessary to maintain an optimal soil moisture level for wheat growth.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 36,
+      "soil_temp": 35,
+      "air_temp": 18.4,
+      "humidity": 77,
+      "soil_ph": 6.8,
+      "nitrogen": 67,
+      "phosphorus": 26,
+      "potassium": 44
+    },
+    "plan": "Based on the farm data, I recommend:\n\n[\"irrigation\"]\n\nThe soil moisture level is 36, which indicates that the soil may be slightly dry. Irrigation would help to ensure that the crop receives sufficient water, especially considering the relatively high air temperature (18.4\u00b0C) and humidity (77%).",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "temperature": "Temperature optimal for crop growth."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 49,
+      "soil_temp": 28,
+      "air_temp": 18.4,
+      "humidity": 50,
+      "soil_ph": 6.1,
+      "nitrogen": 41,
+      "phosphorus": 42,
+      "potassium": 49
+    },
+    "plan": "Based on the given farm data, I would recommend the following actions:\n\n['irrigation']\n\nThe soil moisture level is at 49, which suggests that the crop may be experiencing some water stress. Irrigation can help to address this issue and ensure optimal growing conditions for the wheat.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 44,
+      "soil_temp": 23,
+      "air_temp": 18.4,
+      "humidity": 79,
+      "soil_ph": 6.5,
+      "nitrogen": 39,
+      "phosphorus": 47,
+      "potassium": 24
+    },
+    "plan": "Based on the farm data, I would recommend:\n\n[\"irrigation\"]\n\nThe soil moisture level is 44, which indicates that the soil is somewhat dry. Therefore, irrigation is necessary to ensure proper growth of the wheat crop.\n\nNo other actions (fertilizer, pest control, temperature) are needed based on this data.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "Low Nitrogen \u2192 Apply nitrogen-rich fertilizer.",
+      "temperature": "Temperature optimal for crop growth."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 26,
+      "soil_temp": 31,
+      "air_temp": 18.4,
+      "humidity": 31,
+      "soil_ph": 7.0,
+      "nitrogen": 66,
+      "phosphorus": 24,
+      "potassium": 42
+    },
+    "plan": "Based on the farm data, I would recommend the following actions:\n\n['irrigation']\n\nExplanation: The soil moisture level is 26, which suggests that the soil is slightly dry. Irrigation can help to replenish the soil's water levels and support plant growth. The other factors (soil temperature, air temperature, humidity, pH, nitrogen, phosphorus, and potassium) are within acceptable ranges, so there is no need for fertilizer or pest control at this time.",
+    "result": {
+      "irrigation": "Soil is dry \u2192 Increase irrigation immediately.",
+      "fertilizer": "Low Phosphorus \u2192 Add phosphate fertilizer.",
+      "temperature": "Temperature optimal for crop growth."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 24,
+      "soil_temp": 28,
+      "air_temp": 18.4,
+      "humidity": 49,
+      "soil_ph": 6.2,
+      "nitrogen": 65,
+      "phosphorus": 26,
+      "potassium": 45
+    },
+    "plan": "Based on the farm data, I recommend the following actions:\n\n[\"irrigation\"]\n\nThe soil moisture level is 24, which indicates that the soil needs irrigation. Wheat crop requires adequate moisture for optimal growth and yield. The other parameters are within acceptable limits, so no additional fertilizer or pest control measures are needed at this time.",
+    "result": {
+      "irrigation": "Soil is dry \u2192 Increase irrigation immediately.",
+      "fertilizer": "Low Phosphorus \u2192 Add phosphate fertilizer."
+    }
+  },
+  {
+    "data": {
+      "crop": "Wheat",
+      "soil_moisture": 51,
+      "soil_temp": 25,
+      "air_temp": 18.4,
+      "humidity": 55,
+      "soil_ph": 6.8,
+      "nitrogen": 60,
+      "phosphorus": 46,
+      "potassium": 26
+    },
+    "plan": "Based on the farm data, I would recommend the following actions:\n\n['irrigation', 'fertilizer']\n\nThe soil moisture level is 51, which indicates that the soil is relatively dry. Irrigation is necessary to maintain optimal moisture levels for wheat growth.\n\nAdditionally, the nitrogen and phosphorus levels are lower than recommended (60 and 46, respectively), indicating a need for fertilizer application to support healthy crop growth.",
+    "result": {
+      "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation.",
+      "fertilizer": "Low Potassium \u2192 Add potash fertilizer."
+    }
+  }
+]

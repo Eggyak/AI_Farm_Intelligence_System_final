@@ -1,0 +1,10 @@
+# ============================================================
+# AGRITECH FARM - API CONFIGURATION
+# ============================================================
+# Paste your Data.gov.in API Key below:
+# Sign up / Login at https://data.gov.in to get your API key for Agmarknet Mandi Prices dataset.
+#
+DATA_GOV_API_KEY=579b464db66ec23bdd00000107479de161144d2a6faf0454f929b73d
+
+# Optional: Mistral LLM API Key (for advanced AI agronomy chatbot advice)
+MISTRAL_API_KEY=your_mistral_api_key_here

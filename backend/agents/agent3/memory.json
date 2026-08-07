@@ -1,0 +1,1936 @@
+[
+  {
+    "timestamp": "2026-07-12T14:32:46.273332",
+    "run": {
+      "strategy": "optimize",
+      "budget": 4239.0,
+      "water": 2660.0,
+      "risk_score": 0,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-12T14:32:42.879396",
+            "end": "2026-07-12T20:32:42.879396",
+            "notes": "Risk: low_risk | Severity: 0.10 | Confidence: 0.80"
+          }
+        ],
+        "total_cost_inr": 300.0,
+        "total_water_liters": 0.0,
+        "expected_risk_reduction": 0.04,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-12T14:32:42.892404"
+      },
+      "actions": {}
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 0)**\n\n#### **Improvement Suggestions**\n1. **Skip Scouting Entirely** \u2013 Zero risk means **no action needed**; budget (4,239 INR) and water (2,660L) are wasted.\n2. **Default to No-Action** \u2013 For `risk_score = 0`, **no intervention** is optimal; reallocate funds to preventive maintenance if risks are uncertain.\n\n#### **Mistakes to Avoid**\n- **Over-Scouting for Zero Risk** \u2013 300 INR spent on unnecessary monitoring.\n- **Ignoring Efficiency** \u2013 Unused resources (budget/water) could fund proactive checks.\n\n#### **Optimization Ideas**\n- **Automate Zero-Risk Detection** \u2013 Skip scouting if `risk_score \u2264 0.5`.\n- **Dynamic Thresholds** \u2013 Use *optimize* only for **marginal risks (0.5\u20131.0)**; default to *no-action* for **risk = 0**.\n- **Preventive Maintenance** \u2013 Redirect funds to **soil checks/early pest prevention** if risks are low but uncertain."
+  },
+  {
+    "timestamp": "2026-07-12T14:34:36.324345",
+    "run": {
+      "strategy": "optimize",
+      "budget": 24794.0,
+      "water": 12500.0,
+      "risk_score": 9,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-12T14:34:30.193239",
+            "end": "2026-07-12T20:34:30.193239",
+            "notes": "Risk: Temperature Stress | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 300.0,
+        "total_water_liters": 0.0,
+        "expected_risk_reduction": 0.4,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-12T14:34:30.215769"
+      },
+      "actions": {}
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 9)**\n\n#### **Improvement Suggestions**\n1. **Replace Scouting with Urgent Mitigation**: Temperature stress (severity=1.0) demands **high-impact interventions** (shade cloth, pre-cooling, stress-resistant crops) instead of passive scouting.\n2. **Maximize Budget/Water**: Allocate **24,794 INR/12,500L** for **yield protection** (e.g., irrigation, fertilizers, soil amendments).\n\n#### **Mistakes to Avoid**\n1. **Over-Reliance on Scouting**: Low-cost (300 INR) with no actionable follow-up wastes resources.\n2. **Ignoring Severity**: Critical risk (score=9) requires **proactive, high-impact** solutions.\n\n#### **Optimization Ideas**\n- **Dynamic Thresholds**: Switch to *risk_avoid* for **risk \u22657** (e.g., emergency cooling, crop rotation).\n- **Action Chaining**: Combine scouting with **immediate mitigation** (e.g., foliar sprays, shade).\n- **Resource Reallocation**: Redirect funds to **emergency yield preservation** (e.g., drought-resistant seeds)."
+  },
+  {
+    "timestamp": "2026-07-12T14:35:33.349310",
+    "run": {
+      "strategy": "optimize",
+      "budget": 40567.0,
+      "water": 12500.0,
+      "risk_score": 9,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-12T14:35:28.708328",
+            "end": "2026-07-12T20:35:28.708328",
+            "notes": "Risk: Temperature Stress | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 300.0,
+        "total_water_liters": 0.0,
+        "expected_risk_reduction": 0.4,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-12T14:35:28.726329"
+      },
+      "actions": {}
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 9)**\n\n#### **Improvement Suggestions**\n1. **Switch to High-Impact Mitigation**: Replace scouting with **emergency interventions** (shade cloth, pre-cooling, foliar sprays) for **risk = 9**.\n2. **Maximize Budget/Water**: Allocate **40,567 INR/12,500L** for **yield preservation** (e.g., irrigation, stress-resistant crops).\n\n#### **Mistakes to Avoid**\n1. **Over-Reliance on Scouting**: Low-cost (300 INR) fails to address critical risk.\n2. **Ignoring Severity**: Temperature stress (score=9) demands **proactive, high-impact** solutions.\n\n#### **Optimization Ideas**\n- **Dynamic Thresholds**: Use *risk_avoid* for **risk \u22657** (emergency cooling, crop rotation).\n- **Action Chaining**: Combine scouting with **immediate mitigation** (e.g., foliar sprays, shade).\n- **Resource Reallocation**: Redirect funds to **emergency yield protection** (e.g., drought-resistant seeds)."
+  },
+  {
+    "timestamp": "2026-07-12T14:35:56.122041",
+    "run": {
+      "strategy": "optimize",
+      "budget": 24500.0,
+      "water": 12500.0,
+      "risk_score": 11,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-12T14:35:52.442775",
+            "end": "2026-07-12T20:35:52.442775",
+            "notes": "Risk: Temperature Stress | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 300.0,
+        "total_water_liters": 0.0,
+        "expected_risk_reduction": 0.4,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-12T14:35:52.464996"
+      },
+      "actions": {}
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 11)**\n\n#### **Improvement Suggestions**\n1. **Switch to Emergency Mitigation**: Temperature stress (severity=1.0, confidence=0.90) at **risk_score=11** demands **high-impact interventions** (shade cloth, pre-cooling, foliar sprays) instead of passive scouting.\n2. **Maximize Budget/Water**: Allocate **24,500 INR/12,500L** for **yield preservation** (e.g., targeted irrigation, stress-resistant crops).\n\n#### **Mistakes to Avoid**\n1. **Over-Reliance on Scouting**: Low-cost (300 INR) fails to address **critical risk (score=11)**.\n2. **Ignoring Severity**: Proactive, high-impact solutions are **urgently needed**.\n\n#### **Optimization Ideas**\n- **Dynamic Thresholds**: Use *risk_avoid* for **risk \u22658** (emergency cooling, crop rotation).\n- **Action Chaining**: Combine scouting with **immediate mitigation** (e.g., foliar sprays, shade).\n- **Resource Reallocation**: Redirect funds to **emergency yield protection** (e.g., drought-resistant seeds)."
+  },
+  {
+    "timestamp": "2026-07-12T14:36:41.827542",
+    "run": {
+      "strategy": "optimize",
+      "budget": 50000.0,
+      "water": 25000.0,
+      "risk_score": 6,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-12T14:36:38.356599",
+            "end": "2026-07-12T20:36:38.356599",
+            "notes": "Risk: Temperature Stress | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 300.0,
+        "total_water_liters": 0.0,
+        "expected_risk_reduction": 0.4,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-12T14:36:38.373605"
+      },
+      "actions": {}
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 6)**\n\n#### **Improvement Suggestions**\n1. **Switch to Mitigation**: Temperature stress (severity=1.0) at **risk=6** warrants **proactive interventions** (e.g., shade cloth, foliar sprays) instead of passive scouting.\n2. **Leverage Budget/Water**: Allocate **50,000 INR/25,000L** for **yield protection** (e.g., targeted irrigation, stress-resistant varieties).\n\n#### **Mistakes to Avoid**\n- **Over-Reliance on Scouting**: Low-cost (300 INR) fails to address **moderate-high risk (score=6)**.\n- **Ignoring Actionability**: Scouting alone provides no mitigation\u2014**immediate steps needed**.\n\n#### **Optimization Ideas**\n- **Dynamic Thresholds**: Use *risk_avoid* for **risk \u22657** (emergency cooling, crop rotation).\n- **Action Chaining**: Combine scouting with **immediate mitigation** (e.g., foliar sprays, shade).\n- **Resource Reallocation**: Redirect funds to **preventive stress management** (e.g., soil amendments, early pest control)."
+  },
+  {
+    "timestamp": "2026-07-12T14:41:03.541025",
+    "run": {
+      "strategy": "optimize",
+      "budget": 24500.0,
+      "water": 12500.0,
+      "risk_score": 6,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-12T14:40:59.604271",
+            "end": "2026-07-12T20:40:59.604271",
+            "notes": "Risk: Temperature Stress | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 300.0,
+        "total_water_liters": 0.0,
+        "expected_risk_reduction": 0.4,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-12T14:40:59.617275"
+      },
+      "actions": {}
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 6)**\n\n#### **Improvement Suggestions**\n1. **Replace Scouting with Mitigation**: Temperature stress (severity=1.0) at **risk=6** requires **proactive interventions** (shade cloth, foliar sprays, targeted irrigation).\n2. **Maximize Budget/Water**: Allocate **24,500 INR/12,500L** for **yield preservation** (e.g., stress-resistant crops, soil amendments).\n\n#### **Mistakes to Avoid**\n- **Over-Reliance on Scouting**: Low-cost (300 INR) fails to address **moderate-high risk (score=6)**.\n- **Ignoring Actionability**: Scouting alone provides no mitigation\u2014**immediate steps needed**.\n\n#### **Optimization Ideas**\n- **Dynamic Thresholds**: Use *risk_avoid* for **risk \u22657** (emergency cooling, crop rotation).\n- **Action Chaining**: Combine scouting with **immediate mitigation** (e.g., foliar sprays, shade).\n- **Resource Reallocation**: Redirect funds to **preventive stress management** (soil health, early pest control)."
+  },
+  {
+    "timestamp": "2026-07-13T07:29:16.506921",
+    "run": {
+      "strategy": "optimize",
+      "budget": 47741.0,
+      "water": 17203.0,
+      "risk_score": 12,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T07:29:11.440120",
+            "end": "2026-07-13T13:29:11.440120",
+            "notes": "Risk: Temperature Stress | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 300.0,
+        "total_water_liters": 0.0,
+        "expected_risk_reduction": 0.4,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T07:29:11.653624"
+      },
+      "actions": {}
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 12)**\n\n#### **Improvement Suggestions**\n1. **Switch to Emergency Mitigation**: Replace scouting with **high-impact interventions** (shade cloth, pre-cooling, foliar sprays) for **critical risk (score=12)**.\n2. **Maximize Budget/Water**: Allocate **47,741 INR/17,203L** for **yield preservation** (targeted irrigation, stress-resistant crops).\n\n#### **Mistakes to Avoid**\n- **Over-Reliance on Scouting**: Low-cost (300 INR) fails to address **extreme risk (score=12)**.\n- **Ignoring Severity**: Proactive, high-impact solutions are **urgently needed**.\n\n#### **Optimization Ideas**\n- **Dynamic Thresholds**: Use *risk_avoid* for **risk \u226510** (emergency cooling, crop rotation).\n- **Action Chaining**: Combine scouting with **immediate mitigation** (e.g., foliar sprays, shade).\n- **Resource Reallocation**: Redirect funds to **emergency yield protection** (drought-resistant seeds, soil amendments)."
+  },
+  {
+    "timestamp": "2026-07-13T07:41:46.611744",
+    "run": {
+      "strategy": "optimize",
+      "budget": 24500.0,
+      "water": 12500.0,
+      "risk_score": 11,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T07:41:41.368984",
+            "end": "2026-07-13T13:41:41.368984",
+            "notes": "Risk: Water Stress | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 300.0,
+        "total_water_liters": 0.0,
+        "expected_risk_reduction": 0.4,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T07:41:41.578572"
+      },
+      "actions": {}
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 11, Water Stress)**\n\n#### **Improvement Suggestions**\n1. **Switch to Emergency Mitigation**: Replace scouting with **targeted water-saving interventions** (e.g., drip irrigation, mulching, soil moisture sensors) for **critical water stress (score=11)**.\n2. **Maximize Budget/Water**: Allocate **24,500 INR/12,500L** for **yield preservation** (e.g., deficit irrigation, drought-resistant crops).\n\n#### **Mistakes to Avoid**\n- **Over-Reliance on Scouting**: Low-cost (300 INR) fails to address **high-risk water stress**.\n- **Ignoring Actionability**: Passive monitoring alone doesn\u2019t mitigate **severe stress**.\n\n#### **Optimization Ideas**\n- **Dynamic Thresholds**: Use *risk_avoid* for **water stress \u22659** (emergency irrigation, crop rotation).\n- **Action Chaining**: Combine scouting with **immediate mitigation** (e.g., foliar sprays + water-efficient farming).\n- **Resource Reallocation**: Redirect funds to **preventive water stress management** (soil health, early pest control)."
+  },
+  {
+    "timestamp": "2026-07-13T07:43:05.432108",
+    "run": {
+      "strategy": "optimize",
+      "budget": 24500.0,
+      "water": 12500.0,
+      "risk_score": 8,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T07:42:52.624884",
+            "end": "2026-07-13T13:42:52.624884",
+            "notes": "Risk: Environmental Anomaly | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 300.0,
+        "total_water_liters": 0.0,
+        "expected_risk_reduction": 0.4,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T07:42:52.646900"
+      },
+      "actions": {}
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 8, Environmental Anomaly)**\n\n#### **Improvement Suggestions**\n1. **Switch to Proactive Mitigation**: Replace scouting with **targeted interventions** (e.g., shade cloth, foliar sprays, or soil amendments) for **environmental anomalies** (risk \u22658).\n2. **Leverage Budget/Water**: Allocate **24,500 INR/12,500L** for **yield preservation** (e.g., stress-resistant crops, precision irrigation).\n\n#### **Mistakes to Avoid**\n- **Over-Reliance on Scouting**: Low-cost (300 INR) fails to address **high-risk anomalies**.\n- **Ignoring Actionability**: Passive monitoring alone doesn\u2019t mitigate **critical stress**.\n\n#### **Optimization Ideas**\n- **Dynamic Thresholds**: Use *risk_avoid* for **\u22658** (emergency cooling, crop rotation).\n- **Action Chaining**: Combine scouting with **immediate mitigation** (e.g., foliar sprays + soil health).\n- **Resource Reallocation**: Redirect funds to **preventive stress management** (soil amendments, early pest control)."
+  },
+  {
+    "timestamp": "2026-07-13T07:47:09.053855",
+    "run": {
+      "strategy": "optimize",
+      "budget": 40908.0,
+      "water": 17682.0,
+      "risk_score": 9,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T07:47:02.091671",
+            "end": "2026-07-13T13:47:02.091671",
+            "notes": "Risk: Temperature Stress | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 300.0,
+        "total_water_liters": 0.0,
+        "expected_risk_reduction": 0.4,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T07:47:02.113685"
+      },
+      "actions": {}
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 9, Temperature Stress)**\n\n#### **Improvement Suggestions**\n1. **Switch to Mitigation**: Replace scouting with **proactive interventions** (shade cloth, foliar sprays, or targeted irrigation) for **risk \u22659**.\n2. **Maximize Budget/Water**: Redirect **40,908 INR/17,682L** toward **yield preservation** (e.g., stress-resistant crops, soil amendments).\n\n#### **Mistakes to Avoid**\n- **Over-Reliance on Scouting**: Low-cost (300 INR) fails to address **high-risk stress**.\n- **Ignoring Actionability**: Passive monitoring alone doesn\u2019t mitigate **critical conditions**.\n\n#### **Optimization Ideas**\n- **Dynamic Thresholds**: Use *risk_avoid* for **\u22659** (emergency cooling, crop rotation).\n- **Action Chaining**: Combine scouting with **immediate mitigation** (e.g., foliar sprays + shade).\n- **Resource Reallocation**: Prioritize **preventive stress management** (soil health, early pest control)."
+  },
+  {
+    "timestamp": "2026-07-13T07:58:06.743499",
+    "applied_strategy": "test strategy from verification",
+    "source": "dashboard_apply_button"
+  },
+  {
+    "timestamp": "2026-07-13T07:59:02.278568",
+    "run": {
+      "strategy": "optimize",
+      "budget": 30000.0,
+      "water": 20000.0,
+      "risk_score": 8,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-13T07:58:56.343907",
+            "end": "2026-07-13T13:58:56.343907",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 800.0,
+        "total_water_liters": 5000.0,
+        "expected_risk_reduction": 0.95,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T07:58:56.371437"
+      },
+      "actions": {
+        "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+      }
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 8, Water Stress)**\n\n#### **Improvement Suggestions**\n1. **Scale Irrigation Strategically**: Use **5,000L** for targeted deep-root irrigation (avoid overwatering) + **soil moisture sensors** to optimize future cycles.\n2. **Combine with Mitigation**: Add **shade cloth (INR 2,000\u20135,000)** or **foliar sprays (INR 1,500)** to reduce stress severity.\n\n#### **Mistakes to Avoid**\n- **Over-Reliance on Single Action**: Irrigation alone doesn\u2019t address **dryness + heat stress**\u2014combine with stress-resistant crops.\n- **Ignoring Data Feedback**: Monitor **post-irrigated soil moisture** to adjust future water allocation.\n\n#### **Optimization Ideas**\n- **Dynamic Thresholds**: For **risk \u22658**, trigger **emergency irrigation + shade** (budget: **30,000 INR**).\n- **Action Chaining**: Use **scouting + immediate mitigation** (e.g., foliar spray + drip irrigation).\n- **Resource Reallocation**: Redirect **2,200 INR** to **drought-resistant seed varieties** or **soil amendments**."
+  },
+  {
+    "timestamp": "2026-07-13T08:04:03.538621",
+    "run": {
+      "strategy": "optimize",
+      "budget": 41705.0,
+      "water": 4182.0,
+      "risk_score": 11,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "soil_amendment",
+            "cost_inr": 2000.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T08:03:59.850755",
+            "end": "2026-07-13T14:03:59.850755",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 2000.0,
+        "total_water_liters": 0.0,
+        "expected_risk_reduction": 0.55,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T08:03:59.876268"
+      },
+      "actions": {}
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 11, Soil Anomaly)**\n\n#### **Improvement Suggestions**\n1. **Prioritize High-Impact Mitigation**: Replace **soil amendment alone** with **combined actions** (e.g., **drip irrigation + foliar spray** or **shade cloth + organic amendments**) for **critical risk (score=11)**.\n2. **Leverage Budget Wisely**: Allocate **$41,705** toward **yield preservation** (e.g., **soil moisture sensors + stress-resistant crops**).\n\n#### **Mistakes to Avoid**\n- **Single-Intervention Risk**: Soil amendment alone may not address **severe anomalies** (e.g., heat/water stress).\n- **Ignoring Dynamic Thresholds**: No **real-time feedback**\u2014monitor post-amendment stress levels.\n\n#### **Optimization Ideas**\n- **Action Chaining**: Use **scouting + immediate mitigation** (e.g., **soil sensors + targeted irrigation**).\n- **Resource Reallocation**: Redirect **$2,100** to **preventive stress management** (e.g., **crop rotation, early pest control**).\n- **Dynamic Thresholds**: Trigger **emergency interventions** for **risk \u226510** (e.g., **emergency irrigation + shade cloth**)."
+  },
+  {
+    "timestamp": "2026-07-13T08:04:20.008084",
+    "run": {
+      "strategy": "optimize",
+      "budget": 41705.0,
+      "water": 4182.0,
+      "risk_score": 14,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-13T08:04:15.983122",
+            "end": "2026-07-13T14:04:15.983122",
+            "notes": "Risk: disease | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 1500.0,
+        "total_water_liters": 200.0,
+        "expected_risk_reduction": 0.85,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T08:04:16.009151"
+      },
+      "actions": {}
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 14, Disease Stress)**\n\n#### **Improvement Suggestions**\n1. **Switch to Multi-Layered Mitigation**: Replace **pesticide spray alone** with:\n   - **Biological control** (e.g., beneficial microbes) + **crop rotation** (INR 3,000\u20135,000).\n   - **Foliar sprays + soil amendments** (e.g., neem oil + compost) for **long-term resilience**.\n2. **Leverage Budget for Prevention**: Redirect **$3,600** to:\n   - **Early disease detection sensors** (INR 2,000).\n   - **Resistant crop varieties** (INR 1,600).\n\n#### **Mistakes to Avoid**\n- **Over-Reliance on Reactive Sprays**: Pesticides alone **don\u2019t prevent outbreaks**; focus on **preventive strategies**.\n- **Ignoring Severity**: Risk **\u226514** demands **emergency action chains** (e.g., shade + irrigation).\n\n#### **Optimization Ideas**\n- **Dynamic Thresholds**: For **risk \u226512**, trigger **emergency cooling + drip irrigation** (budget: **$41,705**).\n- **Action Chaining**: Combine **scouting + immediate mitigation** (e.g., **biological control + foliar spray**).\n- **Resource Reallocation**: Prioritize **$2,100** for **soil health + stress-resistant seeds**."
+  },
+  {
+    "timestamp": "2026-07-13T08:04:36.660789",
+    "run": {
+      "strategy": "optimize",
+      "budget": 26104.0,
+      "water": 22135.0,
+      "risk_score": 9,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-13T08:04:31.795830",
+            "end": "2026-07-13T14:04:31.795830",
+            "notes": "Risk: disease | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 1500.0,
+        "total_water_liters": 200.0,
+        "expected_risk_reduction": 0.85,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T08:04:31.820341"
+      },
+      "actions": {}
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 9, Disease Stress)**\n\n#### **Improvement Suggestions**\n1. **Switch to Proactive Mitigation**: Replace **pesticide spray alone** with **biological controls (e.g., neem oil, compost)** + **crop rotation** (INR 3,000\u20135,000).\n2. **Maximize Budget**: Redirect **$24,604** to **early detection sensors (INR 2,000)** + **resistant seeds (INR 12,604)** for long-term resilience.\n\n#### **Mistakes to Avoid**\n- **Over-Reliance on Reactive Sprays**: Pesticides alone **don\u2019t prevent outbreaks**; focus on **prevention**.\n- **Ignoring Severity**: Risk **\u22659** demands **multi-layered action** (e.g., shade + irrigation).\n\n#### **Optimization Ideas**\n- **Dynamic Thresholds**: For **risk \u226510**, trigger **emergency cooling + drip irrigation** (budget: **$26,104**).\n- **Action Chaining**: Combine **scouting + foliar spray + soil amendments** for **immediate + preventive** effects.\n- **Resource Reallocation**: Prioritize **$2,100** for **soil health + stress-resistant seeds**."
+  },
+  {
+    "timestamp": "2026-07-13T08:04:53.966258",
+    "applied_strategy": "System Status: Alert (High risk of disease) Key Problems: 1. Soil Moisture & Humidity (79%) \u2013 High moisture may promote fungal diseases (e.g., Fusarium, Rhizoctonia). 2. Nutrient Imbalance \u2013 Low phosphorus (30) and potassium (35) could stress plants, worsening disease susceptibility. 3. PH (6.5) \u2013 Slightly acidic but stable; no immediate concern, but may need monitoring for nutrient uptake. 4. Wea | Analysis for Current Run (optimize, Risk Score = 9, Disease Stress) Improvement Suggestions 1. Switch to Proactive Mitigation: Replace pesticide spray alone with biological controls (e.g., neem oil, compost) + crop rotation (INR 3,000\u20135,000). 2. Maximize Budget: Redirect $24,604 to early detection sensors (INR 2,000) + resistant seeds (INR 12,604) for long-term resilience. Mistakes to Avoid - Over",
+    "source": "dashboard_apply_button"
+  },
+  {
+    "timestamp": "2026-07-13T08:05:58.098839",
+    "run": {
+      "strategy": "optimize",
+      "budget": 50000.0,
+      "water": 25000.0,
+      "risk_score": 6,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-13T08:05:53.040720",
+            "end": "2026-07-13T14:05:53.040720",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 800.0,
+        "total_water_liters": 5000.0,
+        "expected_risk_reduction": 0.75,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T08:05:53.062232"
+      },
+      "actions": {
+        "irrigation": "High temperature \u2192 Increase irrigation frequency."
+      }
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 6, Heat Stress)**\n\n#### **Improvement Suggestions**\n1. **Combine with Mitigation**: Add **shade cloth (INR 2,000\u20135,000)** or **cooling fans** to reduce heat severity.\n2. **Dynamic Thresholds**: For **risk \u22657**, trigger **emergency irrigation + shade** (budget: **50,000 INR**).\n3. **Resource Reallocation**: Redirect **INR 4,200** to **drought-resistant seeds** or **soil moisture sensors**.\n\n#### **Mistakes to Avoid**\n- **Over-Reliance on Single Action**: Heat stress requires **multi-layered solutions** (e.g., irrigation + shade).\n- **Ignoring Data Feedback**: Monitor **post-irrigated soil temperature/humidity** to adjust future cycles.\n\n#### **Optimization Ideas**\n- **Action Chaining**: Use **scouting + immediate mitigation** (e.g., **drip irrigation + foliar spray**).\n- **Budget Efficiency**: Prioritize **INR 2,000** for **early heat stress sensors** (e.g., soil thermometers).\n- **Preventive Focus**: Shift **INR 3,000** to **resistant crop varieties** for long-term resilience."
+  },
+  {
+    "timestamp": "2026-07-13T08:20:42.726881",
+    "run": {
+      "strategy": "optimize",
+      "budget": 30000.0,
+      "water": 20000.0,
+      "risk_score": 8,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-13T08:20:38.193432",
+            "end": "2026-07-13T10:20:38.193432",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T10:20:38.193432",
+            "end": "2026-07-13T12:20:38.193432",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-13T12:20:38.193432",
+            "end": "2026-07-13T14:20:38.193432",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T14:20:38.193432",
+            "end": "2026-07-13T16:20:38.193432",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-13T16:20:38.193432",
+            "end": "2026-07-13T18:20:38.193432",
+            "notes": "Risk: pest | Severity: 0.50 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T18:20:38.193432",
+            "end": "2026-07-13T20:20:38.193432",
+            "notes": "Risk: pest | Severity: 0.50 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 4000.0,
+        "total_water_liters": 10200.0,
+        "expected_risk_reduction": 1.0,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T08:20:38.216455"
+      },
+      "actions": {
+        "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+      }
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 8, Heat + Water + Pest Stress)**\n\n#### **Improvement Suggestions**\n1. **Replace Reactive Sprays**: Replace **pesticide spray (INR 1,500)** with **biological controls (neem oil, compost)** + **crop rotation (INR 3,000\u20135,000)** for long-term resilience.\n2. **Dynamic Irrigation + Shade**: For **heat/water stress**, add **shade cloth (INR 2,000\u20135,000)** or **cooling fans** to reduce severity.\n3. **Budget Reallocation**: Redirect **INR 2,200** to **soil moisture sensors (INR 1,000)** + **resistant seeds (INR 1,200)** for proactive stress management.\n\n#### **Mistakes to Avoid**\n- **Overlapping Scouting**: Scouting alone doesn\u2019t mitigate risks\u2014**combine with immediate action** (e.g., irrigation + foliar spray).\n- **Single-Purpose Sprays**: Pesticides alone **don\u2019t prevent outbreaks**; focus on **prevention (crop rotation, biological controls)**.\n- **Ignoring Data Feedback**: Monitor **post-irrigated soil moisture/temperature** to adjust cycles dynamically.\n\n#### **Optimization Ideas**\n- **Action Chaining**: Use **scouting \u2192 immediate mitigation** (e.g., **drip irrigation + foliar spray**).\n- **Dynamic Thresholds**: For **risk \u22659**, trigger **emergency cooling + shade** (budget: **INR 30,000**).\n- **Preventive Focus**: Shift **INR 1,500** to **soil health (compost, organic amendments)**."
+  },
+  {
+    "timestamp": "2026-07-13T08:21:36.684661",
+    "run": {
+      "strategy": "optimize",
+      "budget": 30000.0,
+      "water": 20000.0,
+      "risk_score": 8,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-13T12:21:30.586393",
+            "end": "2026-07-13T14:21:30.586393",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T10:21:30.586393",
+            "end": "2026-07-13T12:21:30.586393",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-13T16:21:30.586393",
+            "end": "2026-07-13T18:21:30.586393",
+            "notes": "Risk: pest | Severity: 0.50 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 2600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 1.0,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T08:21:30.607408"
+      },
+      "actions": {
+        "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+      }
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 8, Mixed Stress)**\n\n#### **Improvement Suggestions**\n1. **Replace Pesticide Spray**: Shift to **biological controls (neem oil, compost)** + **crop rotation** (INR 3,000\u20135,000) for long-term resilience.\n2. **Enhance Irrigation Strategy**:\n   - Add **shade cloth (INR 2,000\u20135,000)** or **cooling fans** for heat mitigation.\n   - Use **soil moisture sensors** (INR 1,000) to optimize watering cycles.\n3. **Prioritize Scouting Efficiency**: Combine scouting with **immediate action** (e.g., foliar spray + irrigation).\n\n#### **Mistakes to Avoid**\n- **Over-Reliance on Reactive Sprays**: Pesticides alone **don\u2019t prevent outbreaks**; focus on **prevention**.\n- **Ignoring Data Feedback**: Monitor **soil moisture/temperature** post-irrigated to adjust dynamically.\n- **Single-Purpose Actions**: Heat + water + pest stress require **multi-layered solutions**.\n\n#### **Optimization Ideas**\n- **Dynamic Thresholds**: For **risk \u22659**, trigger **emergency cooling + shade** (budget: **INR 30,000**).\n- **Budget Reallocation**: Redirect **INR 1,200** to **resistant seeds** or **soil amendments**.\n- **Action Chaining**: Use **scouting \u2192 irrigation \u2192 foliar spray** for sequential mitigation."
+  },
+  {
+    "timestamp": "2026-07-13T08:21:41.452604",
+    "run": {
+      "strategy": "low_cost",
+      "budget": 3000.0,
+      "water": 6000.0,
+      "risk_score": 8,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T10:21:37.938575",
+            "end": "2026-07-13T12:21:37.938575",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 300.0,
+        "total_water_liters": 0.0,
+        "expected_risk_reduction": 0.25,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T08:21:37.959585"
+      },
+      "actions": {}
+    },
+    "insight": "### **Analysis for Current Run (`low_cost`, Risk Score = 8, Heat Stress)**\n\n#### **Improvement Suggestions**\n1. **Add Immediate Mitigation**: Replace **only scouting** with **basic irrigation (INR 500\u20131,000)** or **shade cloth (INR 2,000)** for heat relief.\n2. **Prioritize Prevention**: Redirect **INR 2,700** to **drought-resistant seeds (INR 1,500)** or **soil moisture sensors (INR 1,200)** for long-term resilience.\n3. **Leverage Existing Data**: Use **scouting insights** to adjust irrigation timing (e.g., early morning) to save water.\n\n#### **Mistakes to Avoid**\n- **Ignoring Reactive Needs**: Heat stress demands **immediate action** (irrigation/shade) beyond scouting.\n- **Over-Reliance on Low-Cost Scouting**: Alone, it doesn\u2019t address root causes (e.g., soil moisture, nutrient imbalance).\n\n#### **Optimization Ideas**\n- **Budget Efficiency**: Use **INR 300** for **handheld soil thermometer** (early heat detection).\n- **Dynamic Thresholds**: For **risk \u22658**, trigger **emergency micro-irrigation (INR 800)** + **scouting**.\n- **Preventive Shift**: Allocate **INR 1,000** to **crop rotation** (if feasible) to reduce future stress."
+  },
+  {
+    "timestamp": "2026-07-13T08:21:46.759258",
+    "run": {
+      "strategy": "high_yield",
+      "budget": 30000.0,
+      "water": 20000.0,
+      "risk_score": 8,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-13T12:21:42.748689",
+            "end": "2026-07-13T14:21:42.748689",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T10:21:42.748689",
+            "end": "2026-07-13T12:21:42.748689",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-13T16:21:42.748689",
+            "end": "2026-07-13T18:21:42.748689",
+            "notes": "Risk: pest | Severity: 0.50 | Confidence: 0.90"
+          },
+          {
+            "type": "fertilize",
+            "cost_inr": 1200.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T20:21:42.748689",
+            "end": "2026-07-13T22:21:42.748689",
+            "notes": "Risk: nutrient_gap | Severity: 0.60 | Confidence: 0.80"
+          },
+          {
+            "type": "soil_amendment",
+            "cost_inr": 2000.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T22:21:42.748689",
+            "end": "2026-07-14T00:21:42.748689",
+            "notes": "Risk: nutrient_gap | Severity: 0.60 | Confidence: 0.80"
+          }
+        ],
+        "total_cost_inr": 5800.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 1.0,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T08:21:42.768700"
+      },
+      "actions": {
+        "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+      }
+    },
+    "insight": "### **Analysis for Current `high_yield` Run (Risk Score = 8, Mixed Stress)**\n\n#### **Improvement Suggestions**\n1. **Replace Pesticide Spray**: Shift to **biological controls (neem oil, compost)** + **crop rotation** (INR 3,000\u20135,000) for long-term pest resilience.\n2. **Enhance Nutrient Strategy**:\n   - Redirect **INR 1,200 (fertilize) + INR 2,000 (soil amendment)** to **resistant seeds (INR 3,200)** or **soil moisture sensors (INR 1,000)** for proactive nutrient management.\n3. **Add Heat Mitigation**:\n   - Integrate **shade cloth (INR 2,000\u20135,000)** or **cooling fans** to reduce heat severity.\n4. **Optimize Irrigation**:\n   - Use **soil moisture sensors** (INR 1,000) to avoid overwatering and save water.\n\n#### **Mistakes to Avoid**\n- **Over-Reliance on Reactive Sprays**: Pesticides alone don\u2019t prevent outbreaks\u2014focus on **prevention (crop rotation, biological controls)**.\n- **Ignoring Data Feedback**: Monitor **soil moisture, temperature, and nutrient levels post-actions** to adjust dynamically.\n- **Single-Purpose Actions**: Heat, water, pest, and nutrient stresses require **multi-layered solutions**.\n\n#### **Optimization Ideas**\n- **Dynamic Thresholds**: For **risk \u22659**, trigger **emergency cooling + shade + soil sensors** (budget: **INR 30,000**).\n- **Budget Efficiency**: Redirect **INR 1,500** to **early heat stress sensors** (e.g., soil thermometers).\n- **Action Chaining**: Use **scouting \u2192 irrigation \u2192 foliar spray \u2192 nutrient amendments** sequentially."
+  },
+  {
+    "timestamp": "2026-07-13T08:22:33.967184",
+    "run": {
+      "strategy": "optimize",
+      "budget": 30000.0,
+      "water": 20000.0,
+      "risk_score": 8,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-13T12:22:30.058570",
+            "end": "2026-07-13T14:22:30.058570",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T10:22:30.058570",
+            "end": "2026-07-13T12:22:30.058570",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-13T16:22:30.058570",
+            "end": "2026-07-13T18:22:30.058570",
+            "notes": "Risk: pest | Severity: 0.50 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 2600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 1.0,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T08:22:30.072079"
+      },
+      "actions": {
+        "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+      }
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 8, Mixed Stress)**\n\n#### **Improvement Suggestions**\n1. **Replace Pesticide Spray**: Shift to **biological controls (neem oil, compost)** + **crop rotation (INR 3,000\u20135,000)** for long-term resilience.\n2. **Add Heat Mitigation**: Integrate **shade cloth (INR 2,000\u20135,000)** or **cooling fans** to reduce severity.\n3. **Enhance Irrigation Strategy**:\n   - Use **soil moisture sensors (INR 1,000)** to optimize watering.\n   - Redirect **INR 1,200** to **resistant seeds** or **soil amendments** for proactive stress management.\n\n#### **Mistakes to Avoid**\n- **Over-Reliance on Reactive Sprays**: Pesticides alone don\u2019t prevent outbreaks\u2014focus on prevention.\n- **Ignoring Data Feedback**: Monitor **soil moisture/temperature** post-actions to adjust dynamically.\n- **Single-Purpose Actions**: Mixed stress requires **multi-layered solutions**.\n\n#### **Optimization Ideas**\n- **Dynamic Thresholds**: For **risk \u22659**, trigger **emergency cooling + shade + sensors** (budget: **INR 30,000**).\n- **Budget Efficiency**: Use **INR 300** for **handheld soil thermometer** (early heat detection).\n- **Action Chaining**: Prioritize **scouting \u2192 irrigation \u2192 foliar spray** sequentially."
+  },
+  {
+    "timestamp": "2026-07-13T08:24:46.563100",
+    "run": {
+      "strategy": "high_yield",
+      "budget": 46499.0,
+      "water": 18799.0,
+      "risk_score": 6,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-13T08:24:42.114508",
+            "end": "2026-07-13T10:24:42.114508",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T14:24:42.114508",
+            "end": "2026-07-13T16:24:42.114508",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "soil_amendment",
+            "cost_inr": 2000.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T12:24:42.114508",
+            "end": "2026-07-13T14:24:42.114508",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "fertilize",
+            "cost_inr": 1200.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T16:24:42.114508",
+            "end": "2026-07-13T18:24:42.114508",
+            "notes": "Risk: nutrient_gap | Severity: 0.60 | Confidence: 0.80"
+          }
+        ],
+        "total_cost_inr": 4300.0,
+        "total_water_liters": 5000.0,
+        "expected_risk_reduction": 1.0,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T08:24:42.136530"
+      },
+      "actions": {
+        "irrigation": "High temperature \u2192 Increase irrigation frequency."
+      }
+    },
+    "insight": "### **Analysis for Current Run (`high_yield`, Risk Score = 6, Mixed Stress)**\n\n#### **Improvement Suggestions**\n1. **Add Heat Mitigation**: Integrate **shade cloth (INR 2,000\u20135,000)** or **cooling fans** to reduce heat severity.\n2. **Enhance Nutrient Strategy**:\n   - Replace **fertilize (INR 1,200)** with **resistant seeds (INR 2,000)** or **soil moisture sensors (INR 1,000)** for proactive nutrient management.\n   - Add **biological pest controls (neem oil, compost)** to replace pesticide reliance.\n3. **Optimize Scouting**: Combine with **soil amendments** (e.g., compost) for holistic stress management.\n\n#### **Mistakes to Avoid**\n- **Ignoring Heat Stress**: Current plan lacks proactive cooling measures.\n- **Over-Reliance on Fertilizers**: Nutrient gaps may worsen without soil health improvements.\n- **Lack of Dynamic Monitoring**: No sensors to adjust irrigation/amendments based on real-time data.\n\n#### **Optimization Ideas**\n- **Budget Efficiency**: Redirect **INR 1,000** to **soil moisture sensors** (INR 1,000) + **early heat sensors** (INR 500).\n- **Action Chaining**: Prioritize **soil amendment \u2192 irrigation \u2192 scouting \u2192 nutrient amendments** sequentially.\n- **Dynamic Thresholds**: For **risk \u22657**, trigger **emergency shade + cooling fans** (budget: **INR 10,000**)."
+  },
+  {
+    "timestamp": "2026-07-13T08:25:21.161182",
+    "applied_strategy": "System Status: Alert (Critical conditions detected) Key Problems: 1. Heat Stress \u2013 Extreme temperature (47\u00b0C) risks crop dehydration. 2. Nutrient Gap \u2013 Phosphorus (30) and Potassium (35) are low; Nitrogen (40) is borderline optimal. 3. Anomaly Risk \u2013 High confidence (0.9) in irregularities (soil/weather mismatch). Suggestions: - Immediate: Irrigate (5kL) to cool soil (heatstress). - Short-term: Sc | Analysis for Current Run (highyield, Risk Score = 6, Mixed Stress) Improvement Suggestions 1. Add Heat Mitigation: Integrate shade cloth (INR 2,000\u20135,000) or cooling fans to reduce heat severity. 2. Enhance Nutrient Strategy: - Replace fertilize (INR 1,200) with resistant seeds (INR 2,000) or soil moisture sensors (INR 1,000) for proactive nutrient management. - Add biological pest controls (neem",
+    "source": "dashboard_apply_button"
+  },
+  {
+    "timestamp": "2026-07-13T08:25:42.332455",
+    "applied_strategy": "The monitoring agent's LLM analysis of this run appears here. | \n            Run the pipeline \u2014 Agent 5 analyzes your run history and its insight appears here.",
+    "source": "dashboard_apply_button"
+  },
+  {
+    "timestamp": "2026-07-13T08:26:16.593846",
+    "run": {
+      "strategy": "low_cost",
+      "budget": 13918.0,
+      "water": 22529.0,
+      "risk_score": 6,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-13T08:26:10.923486",
+            "end": "2026-07-13T10:26:10.923486",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T14:26:10.923486",
+            "end": "2026-07-13T16:26:10.923486",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "soil_amendment",
+            "cost_inr": 2000.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T12:26:10.923486",
+            "end": "2026-07-13T14:26:10.923486",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 3100.0,
+        "total_water_liters": 5000.0,
+        "expected_risk_reduction": 1.0,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T08:26:10.943515"
+      },
+      "actions": {
+        "irrigation": "High temperature \u2192 Increase irrigation frequency."
+      }
+    },
+    "insight": "### **Analysis for `low_cost` Run (Risk Score = 6, Heat/Nutrient Stress)**\n\n#### **Improvement Suggestions**\n1. **Prioritize Heat Mitigation**\n   - Add **shade cloth (INR 2,000\u20135,000)** or **cooling fans** (INR 1,500\u20133,000) to reduce severity.\n   - Redirect **INR 1,000** to **soil moisture sensors** (early heat detection).\n\n2. **Nutrient Optimization**\n   - Replace **soil amendment (INR 2,000)** with **resistant seeds (INR 2,000)** or **biological pest controls (neem oil, compost, INR 1,500)**.\n   - Monitor **P/K/N levels** post-amendment for adjustments.\n\n3. **Action Efficiency**\n   - **Combine scouting + soil amendment** (e.g., compost) for holistic stress relief.\n   - **Delay irrigation** if soil moisture sensors confirm dryness (save water).\n\n#### **Mistakes to Avoid**\n- **Ignoring Heat Stress**: Current plan lacks proactive cooling measures.\n- **Over-Reliance on Reactive Amendments**: Nutrient gaps may persist without proactive seed/resistant varieties.\n- **Single-Purpose Actions**: Mixed stress requires **multi-layered solutions** (e.g., irrigation + shade + nutrients).\n\n#### **Optimization Ideas**\n- **Budget Efficiency**: Use **INR 500** for **handheld soil thermometer** (early heat detection).\n- **Dynamic Thresholds**: For **risk \u22657**, trigger **emergency shade + cooling fans** (budget: **INR 3,000**).\n- **Action Chaining**: Prioritize **soil amendment \u2192 scouting \u2192 irrigation** sequentially."
+  },
+  {
+    "timestamp": "2026-07-13T08:31:21.613065",
+    "run": {
+      "strategy": "low_cost",
+      "budget": 24500.0,
+      "water": 12500.0,
+      "risk_score": 11,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-13T08:31:16.098864",
+            "end": "2026-07-13T10:31:16.098864",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T18:31:16.098864",
+            "end": "2026-07-13T20:31:16.098864",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "soil_amendment",
+            "cost_inr": 2000.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T16:31:16.098864",
+            "end": "2026-07-13T18:31:16.098864",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 3100.0,
+        "total_water_liters": 5000.0,
+        "expected_risk_reduction": 1.0,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T08:31:16.113369"
+      },
+      "actions": {
+        "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation."
+      }
+    },
+    "insight": "### **Analysis for Current Run (`low_cost`, Risk Score = 11, Severe Stress)**\n\n#### **Key Issues:**\n- **Critical Water Stress** (5kL irrigation insufficient for high risk).\n- **Lack of Proactive Heat/Nutrient Mitigation** (no sensors, shade, or resilient seeds).\n- **Single-Purpose Actions** (no layered defense against mixed stress).\n\n#### **Improvement Suggestions:**\n1. **Emergency Water & Heat Control**\n   - **Double irrigation** (10kL) + **soil moisture sensors (INR 1,000)** to avoid dehydration.\n   - **Shade cloth (INR 3,000)** or **cooling fans (INR 2,000)** to prevent heat damage.\n\n2. **Nutrient & Pest Defense**\n   - Replace **soil amendment (INR 2k)** with **resistant seeds (INR 2k)** or **biological controls (neem/compost, INR 1.5k)**.\n   - Monitor **P/K/N levels** post-amendment.\n\n3. **Dynamic Adjustments**\n   - **Delay irrigation** if sensors detect dryness (save water).\n   - **Prioritize scouting \u2192 amendment \u2192 irrigation** sequentially.\n\n#### **Mistakes to Avoid:**\n- **Overlooking Water Needs**: Current 5kL irrigation is insufficient for risk 11.\n- **Ignoring Heat Stress**: No proactive cooling measures.\n- **Single-Threaded Approach**: Mixed stress requires **multi-layered solutions**.\n\n#### **Optimization Ideas:**\n- **Budget Efficiency**: Use **INR 500** for **handheld soil thermometer** (early heat detection).\n- **Emergency Plan**: For **risk \u226510**, trigger **2x irrigation + shade + sensors** (budget: **INR 6,000**).\n- **Action Chaining**: **Scouting \u2192 Soil Amendment \u2192 Irrigation \u2192 Nutrient Check** sequentially."
+  },
+  {
+    "timestamp": "2026-07-13T08:33:36.841255",
+    "run": {
+      "strategy": "low_cost",
+      "budget": 24500.0,
+      "water": 12500.0,
+      "risk_score": 11,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-13T08:33:32.552147",
+            "end": "2026-07-13T10:33:32.552147",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T18:33:32.552147",
+            "end": "2026-07-13T20:33:32.552147",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "soil_amendment",
+            "cost_inr": 2000.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T16:33:32.552147",
+            "end": "2026-07-13T18:33:32.552147",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 3100.0,
+        "total_water_liters": 5000.0,
+        "expected_risk_reduction": 1.0,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T08:33:32.566147"
+      },
+      "actions": {
+        "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation."
+      }
+    },
+    "insight": "### **Analysis for Current Run (`low_cost`, Risk Score = 11, Severe Stress)**\n\n#### **Key Issues:**\n1. **Insufficient Water Allocation** \u2013 Only **5kL** for a **risk score of 11** (critical water stress).\n2. **Lack of Proactive Heat/Nutrient Mitigation** \u2013 No sensors, shade, or resilient seeds.\n3. **Single-Purpose Actions** \u2013 No layered defense against mixed stress.\n\n#### **Improvement Suggestions:**\n- **Double Irrigation:** Increase to **10kL** + **soil moisture sensors (INR 1,000)** to prevent dehydration.\n- **Emergency Heat Control:** Add **shade cloth (INR 3,000)** or **cooling fans (INR 2,000)**.\n- **Nutrient Defense:** Replace **soil amendment (INR 2k)** with **resistant seeds (INR 2k)** or **biological pest controls (neem/compost, INR 1.5k)**.\n\n#### **Mistakes to Avoid:**\n- **Ignoring Critical Water Needs** \u2013 Current 5kL is insufficient for risk 11.\n- **No Proactive Cooling** \u2013 Heat stress remains unmitigated.\n- **No Dynamic Adjustments** \u2013 Single-threaded approach fails mixed stress.\n\n#### **Optimization Ideas:**\n- **Budget Efficiency:** Use **INR 500** for a **handheld soil thermometer** (early heat detection).\n- **Emergency Plan:** For **risk \u226510**, trigger **2x irrigation + shade + sensors (INR 6k)**.\n- **Action Chaining:** **Scouting \u2192 Soil Amendment \u2192 Irrigation \u2192 Nutrient Check** sequentially."
+  },
+  {
+    "timestamp": "2026-07-13T08:33:56.556929",
+    "run": {
+      "strategy": "optimize",
+      "budget": 41705.0,
+      "water": 19824.0,
+      "risk_score": 11,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-13T08:33:51.067836",
+            "end": "2026-07-13T10:33:51.067836",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T18:33:51.067836",
+            "end": "2026-07-13T20:33:51.067836",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-13T20:33:51.067836",
+            "end": "2026-07-13T22:33:51.067836",
+            "notes": "Risk: disease | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "soil_amendment",
+            "cost_inr": 2000.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T16:33:51.067836",
+            "end": "2026-07-13T18:33:51.067836",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 4600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 1.0,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T08:33:51.090353"
+      },
+      "actions": {
+        "irrigation": "High temperature \u2192 Increase irrigation frequency."
+      }
+    },
+    "insight": "### **Analysis for `optimize` Run (Risk Score = 11, Severe Stress)**\n\n#### **Key Issues:**\n1. **Insufficient Heat/Nutrient Mitigation** \u2013 No proactive cooling (shade/cloth/fans) or resilient seeds.\n2. **Overlapping Actions** \u2013 Pesticide spray (disease risk) conflicts with nutrient/heat stress.\n3. **Water Inefficiency** \u2013 Only **5kL** for critical **heat stress** (needs **10kL+**).\n4. **Single-Purpose Focus** \u2013 No layered defense against mixed stress.\n\n#### **Improvement Suggestions:**\n- **Heat Control:** Add **shade cloth (INR 3k\u20135k)** or **cooling fans (INR 2k)** + **soil moisture sensors (INR 1k)**.\n- **Nutrient Defense:** Replace **soil amendment (INR 2k)** with **resistant seeds (INR 2k)** or **biological controls (neem/compost, INR 1.5k)**.\n- **Dynamic Adjustments:**\n  - **Double irrigation (10kL)** for heat stress.\n  - **Delay pesticide** if disease risk drops (save cost).\n  - **Prioritize scouting \u2192 amendment \u2192 irrigation \u2192 nutrient check**.\n\n#### **Mistakes to Avoid:**\n- **Ignoring Heat Stress** \u2013 Current plan lacks proactive cooling.\n- **Over-Reliance on Reactive Pesticides** \u2013 Nutrient gaps persist without seeds/sensors.\n- **Single-Threaded Approach** \u2013 Mixed stress requires **multi-layered solutions**.\n\n#### **Optimization Ideas:**\n- **Budget Efficiency:** Use **INR 500** for a **handheld soil thermometer**.\n- **Emergency Plan:** For **risk \u226510**, trigger **2x irrigation + shade + sensors (INR 6k)**.\n- **Action Chaining:** **Scouting \u2192 Soil Amendment \u2192 Irrigation \u2192 Nutrient Check \u2192 Pesticide (if needed)**."
+  },
+  {
+    "timestamp": "2026-07-13T08:39:05.798130",
+    "run": {
+      "strategy": "optimize",
+      "budget": 50000.0,
+      "water": 25000.0,
+      "risk_score": 12,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-13T12:39:01.080709",
+            "end": "2026-07-13T14:39:01.080709",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T18:39:01.080709",
+            "end": "2026-07-13T20:39:01.080709",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "soil_amendment",
+            "cost_inr": 2000.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T16:39:01.080709",
+            "end": "2026-07-13T18:39:01.080709",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-13T20:39:01.080709",
+            "end": "2026-07-13T22:39:01.080709",
+            "notes": "Risk: disease | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 4600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 1.0,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T08:39:01.094230"
+      },
+      "actions": {
+        "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+      }
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 12, Extreme Stress)**\n\n#### **Key Issues:**\n1. **Insufficient Water Allocation** \u2013 Only **5kL** for **risk 12** (critical water/heat stress).\n2. **Lack of Proactive Heat Mitigation** \u2013 No sensors, shade, or cooling measures.\n3. **Overlapping Actions** \u2013 Pesticide conflicts with nutrient/heat stress management.\n4. **Single-Purpose Focus** \u2013 No layered defense against **multi-stress (water + heat + disease)**.\n\n---\n\n### **Improvement Suggestions:**\n1. **Emergency Water & Heat Control**\n   - **Double irrigation (10kL)** + **soil moisture sensors (INR 1k)** for real-time monitoring.\n   - **Shade cloth (INR 3k\u20135k)** or **cooling fans (INR 2k)** to prevent heat damage.\n\n2. **Nutrient & Disease Defense**\n   - Replace **soil amendment (INR 2k)** with **resistant seeds (INR 2k)** or **biological controls (neem/compost, INR 1.5k)**.\n   - **Delay pesticide** if disease risk drops (save cost).\n\n3. **Dynamic Adjustments**\n   - **Prioritize:**\n     Scouting \u2192 Soil Amendment \u2192 **Irrigation (10kL) \u2192 Nutrient Check \u2192 Pesticide (if needed)**.\n   - **Add early warning:** Handheld soil thermometer (INR 500) for heat detection.\n\n---\n\n### **Mistakes to Avoid:**\n- **Ignoring Extreme Risk (12)** \u2013 Current 5kL irrigation is **insufficient**.\n- **No Proactive Cooling** \u2013 Heat stress remains unmitigated.\n- **Over-Reliance on Reactive Pesticides** \u2013 Nutrient gaps persist without sensors/seeds.\n- **Single-Threaded Approach** \u2013 Mixed stress requires **multi-layered solutions**.\n\n---\n### **Optimization Ideas:**\n- **Emergency Plan:** For **risk \u226512**, trigger **2x irrigation (10kL) + shade + sensors (INR 6k)**.\n- **Budget Efficiency:** Use **INR 500** for a **soil thermometer** + **INR 1k** for sensors.\n- **Action Chaining:** **Scouting \u2192 Amendment \u2192 Irrigation (10kL) \u2192 Nutrient Check \u2192 Pesticide (if needed)**."
+  },
+  {
+    "timestamp": "2026-07-13T08:40:02.022027",
+    "run": {
+      "strategy": "optimize",
+      "budget": 500.0,
+      "water": 575.0,
+      "risk_score": 9,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-13T14:39:55.671077",
+            "end": "2026-07-13T16:39:55.671077",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 300.0,
+        "total_water_liters": 0.0,
+        "expected_risk_reduction": 0.4,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-13T08:39:55.693584"
+      },
+      "actions": {}
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 9, Moderate Stress)**\n\n#### **Key Issues:**\n1. **Budget & Scope Mismatch** \u2013 $500 budget is too low for a **risk score of 9** (needs proactive heat/nutrient defense).\n2. **Lack of Actionable Steps** \u2013 Only **scouting** (no irrigation, cooling, or nutrient amendments).\n3. **Insufficient Water Allocation** \u2013 575L is negligible for stress mitigation.\n\n#### **Improvement Suggestions:**\n- **Add Heat Mitigation:** Redirect **$200** to **shade cloth (INR 2k\u20133k)** or **cooling fans (INR 1.5k)**.\n- **Prioritize Nutrients:** Replace **scouting** with **soil amendment ($200)** or **resistant seeds ($200)**.\n- **Dynamic Adjustments:** Use **$50** for a **handheld soil thermometer** (early heat detection).\n\n#### **Mistakes to Avoid:**\n- **Ignoring Proactive Measures** \u2013 Current plan lacks cooling/nutrient defense.\n- **Over-Reliance on Reactive Scouting** \u2013 No layered stress mitigation.\n- **Underfunded for Risk Level** \u2013 $500 is insufficient for risk 9.\n\n#### **Optimization Ideas:**\n- **Budget Efficiency:** Use **$100** for **soil moisture sensors** + **$100** for **early warning tools**.\n- **Action Chaining:** **Scouting \u2192 Soil Amendment \u2192 Irrigation (if needed)** sequentially.\n- **Emergency Plan:** For **risk \u22658**, trigger **$500 for shade + sensors**."
+  },
+  {
+    "timestamp": "2026-07-14T07:26:09.984002",
+    "run": {
+      "strategy": "optimize",
+      "budget": 24500.0,
+      "water": 12500.0,
+      "risk_score": 8,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-14T11:26:05.711895",
+            "end": "2026-07-14T13:26:05.711895",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T09:26:05.711895",
+            "end": "2026-07-14T11:26:05.711895",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-14T15:26:05.711895",
+            "end": "2026-07-14T17:26:05.711895",
+            "notes": "Risk: pest | Severity: 0.50 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 2600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 1.0,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-14T07:26:05.924495"
+      },
+      "actions": {
+        "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+      }
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 8, Moderate Stress)**\n\n#### **Key Issues:**\n1. **Insufficient Water Allocation** \u2013 Only **5kL** for **risk 8** (needs **10kL+** for heat + water stress).\n2. **Overlapping Actions** \u2013 Pesticide (low severity) conflicts with **heat/soil stress** management.\n3. **No Proactive Heat Mitigation** \u2013 No sensors, shade, or cooling measures.\n4. **Single-Purpose Focus** \u2013 Reactive approach fails mixed stress.\n\n#### **Improvement Suggestions:**\n- **Double Irrigation (10kL)** + **soil moisture sensors (INR 1k)** for real-time monitoring.\n- **Add Heat Control:** Shade cloth (INR 3k) or cooling fans (INR 2k).\n- **Prioritize Nutrients:** Replace pesticide (INR 1.5k) with **resistant seeds (INR 2k)** or **biological controls (INR 1.5k)**.\n- **Dynamic Adjustments:** Delay pesticide if pest risk drops; **scouting \u2192 amendment \u2192 irrigation \u2192 nutrient check**.\n\n#### **Mistakes to Avoid:**\n- Ignoring **heat stress** (no proactive cooling).\n- Over-relying on **reactive pesticide** (low-severity pest risk).\n- **Single-threaded approach** (mixed stress requires layered defense).\n\n#### **Optimization Ideas:**\n- **Budget Efficiency:** Use **INR 500** for a **soil thermometer** + **INR 500** for sensors.\n- **Emergency Plan:** For **risk \u22659**, trigger **2x irrigation (10kL) + shade + sensors (INR 5k)**.\n- **Action Chaining:** **Scouting \u2192 Soil Amendment \u2192 Irrigation (10kL) \u2192 Nutrient Check \u2192 Pesticide (if needed)**."
+  },
+  {
+    "timestamp": "2026-07-14T15:53:51.290942",
+    "run": {
+      "strategy": "optimize",
+      "budget": 39371.0,
+      "water": 16724.0,
+      "risk_score": 14,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-14T19:53:46.051734",
+            "end": "2026-07-14T21:53:46.051734",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-15T05:53:46.051734",
+            "end": "2026-07-15T07:53:46.051734",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-15T07:53:46.051734",
+            "end": "2026-07-15T09:53:46.051734",
+            "notes": "Risk: disease | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "soil_amendment",
+            "cost_inr": 2000.0,
+            "water_liters": 0.0,
+            "start": "2026-07-15T03:53:46.051734",
+            "end": "2026-07-15T05:53:46.051734",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 4600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 1.0,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-14T15:53:46.269260"
+      },
+      "actions": {
+        "irrigation": "High temperature \u2192 Increase irrigation frequency."
+      }
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 14, Extreme Stress)**\n\n#### **Key Issues:**\n1. **Insufficient Water & Heat Mitigation** \u2013 Only **5kL** for **risk 14** (critical water/heat/disease stress). No sensors, shade, or cooling.\n2. **Overlapping Reactive Actions** \u2013 Pesticide (disease risk) conflicts with **water/heat stress** management.\n3. **Single-Purpose Focus** \u2013 No layered defense against **multi-stress (water + heat + disease)**.\n\n#### **Improvement Suggestions:**\n- **Emergency Water & Heat Control:**\n  - **Double irrigation (15kL)** + **soil moisture sensors (INR 1k)** + **handheld thermometer (INR 500)**.\n  - **Shade cloth (INR 5k)** or **cooling fans (INR 3k)** for heat protection.\n- **Nutrient & Disease Defense:**\n  - Replace **soil amendment (INR 2k)** with **resistant seeds (INR 2k)** or **biological controls (INR 1.5k)**.\n  - **Delay pesticide** if disease risk drops (save cost).\n- **Dynamic Adjustments:**\n  - **Prioritize:** Scouting \u2192 Soil Amendment \u2192 **Irrigation (15kL) \u2192 Nutrient Check \u2192 Pesticide (if needed)**.\n  - **Add real-time monitoring** (sensors + thermometer).\n\n#### **Mistakes to Avoid:**\n- Ignoring **extreme risk (14)** \u2013 Current 5kL is **insufficient**.\n- No **proactive cooling** \u2013 Heat stress remains unmitigated.\n- Over-relying on **reactive pesticide** \u2013 Nutrient gaps persist without sensors/seeds.\n- **Single-threaded approach** \u2013 Mixed stress requires **multi-layered solutions**.\n\n#### **Optimization Ideas:**\n- **Budget Efficiency:** Use **INR 2k** for **sensors + thermometer** + **INR 3k for shade** (total **INR 5k**).\n- **Emergency Plan:** For **risk \u226514**, trigger **15kL irrigation + shade + sensors (INR 8k)**.\n- **Action Chaining:** **Scouting \u2192 Amendment \u2192 Irrigation (15kL) \u2192 Nutrient Check \u2192 Pesticide (if needed)**."
+  },
+  {
+    "timestamp": "2026-07-14T15:55:09.375029",
+    "applied_strategy": "System Status: Alert (Critical risks detected) Key Problems: 1. Water Stress \u2013 Soil moisture (42/100) is dangerously low; irrigation needed urgently. 2. Heat Stress \u2013 High temperature (60\u00b0C) risks crop dehydration and stress. 3. Nutrient Imbalance \u2013 Low phosphorus (30/100) and potassium (35/100) may hinder growth. 4. Anomaly Risk \u2013 Unusual sensor readings warrant investigation. Suggestions: - Imme | Analysis for Current Run (optimize, Risk Score = 14, Extreme Stress) Key Issues: 1. Insufficient Water & Heat Mitigation \u2013 Only 5kL for risk 14 (critical water/heat/disease stress). No sensors, shade, or cooling. 2. Overlapping Reactive Actions \u2013 Pesticide (disease risk) conflicts with water/heat stress management. 3. Single-Purpose Focus \u2013 No layered defense against multi-stress (water + heat + d",
+    "source": "dashboard_apply_button"
+  },
+  {
+    "timestamp": "2026-07-14T15:55:47.444289",
+    "run": {
+      "strategy": "optimize",
+      "budget": 43414.0,
+      "water": 22078.0,
+      "risk_score": 14,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-14T19:55:42.792011",
+            "end": "2026-07-14T21:55:42.792011",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-15T05:55:42.792011",
+            "end": "2026-07-15T07:55:42.792011",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-15T07:55:42.792011",
+            "end": "2026-07-15T09:55:42.792011",
+            "notes": "Risk: disease | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "soil_amendment",
+            "cost_inr": 2000.0,
+            "water_liters": 0.0,
+            "start": "2026-07-15T03:55:42.792011",
+            "end": "2026-07-15T05:55:42.792011",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 4600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 1.0,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-14T15:55:42.812282"
+      },
+      "actions": {
+        "irrigation": "High temperature \u2192 Increase irrigation frequency."
+      }
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 14, Extreme Stress)**\n\n#### **Key Issues:**\n1. **Insufficient Water & Heat Mitigation** \u2013 Only **5kL** for extreme stress (needs **15kL+**).\n2. **No Proactive Cooling/Sensors** \u2013 Missing shade, fans, or real-time monitoring.\n3. **Overlapping Reactive Actions** \u2013 Pesticide conflicts with water/heat management.\n4. **Single-Purpose Focus** \u2013 No layered defense for **multi-stress (water + heat + disease)**.\n\n---\n\n### **Improvement Suggestions:**\n- **Emergency Plan:**\n  - **Double irrigation (15kL)** + **soil sensors (INR 1k)** + **handheld thermometer (INR 500)**.\n  - **Shade cloth (INR 3k\u20135k)** or **cooling fans (INR 2k)** for heat protection.\n- **Nutrient & Disease Defense:**\n  - Replace **soil amendment (INR 2k)** with **resistant seeds (INR 2k)** or **biological controls (INR 1.5k)**.\n  - **Delay pesticide** if disease risk drops.\n- **Dynamic Prioritization:**\n  - **Scouting \u2192 Soil Amendment \u2192 Irrigation (15kL) \u2192 Nutrient Check \u2192 Pesticide (if needed)**.\n\n---\n\n### **Mistakes to Avoid:**\n- Ignoring **extreme risk (14)** \u2192 Current 5kL is **insufficient**.\n- No **proactive cooling** \u2192 Heat stress remains unmitigated.\n- Over-relying on **reactive pesticide** \u2192 Nutrient gaps persist.\n- **Single-threaded approach** \u2192 Mixed stress needs **multi-layered solutions**.\n\n---\n### **Optimization Ideas:**\n- **Budget Efficiency:** Use **INR 5k** for **sensors + thermometer + shade** (total **INR 8k**).\n- **Action Chaining:** **Real-time monitoring \u2192 Adjust irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**.\n- **Emergency Trigger:** For **risk \u226514**, **15kL irrigation + shade + sensors (INR 8k)**."
+  },
+  {
+    "timestamp": "2026-07-14T15:56:12.517655",
+    "run": {
+      "strategy": "optimize",
+      "budget": 50000.0,
+      "water": 25000.0,
+      "risk_score": 9,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-14T15:56:05.800533",
+            "end": "2026-07-14T17:56:05.800533",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T21:56:05.800533",
+            "end": "2026-07-14T23:56:05.800533",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "soil_amendment",
+            "cost_inr": 2000.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T19:56:05.800533",
+            "end": "2026-07-14T21:56:05.800533",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-14T23:56:05.800533",
+            "end": "2026-07-15T01:56:05.800533",
+            "notes": "Risk: disease | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 4600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 1.0,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-14T15:56:05.822095"
+      },
+      "actions": {
+        "irrigation": "High temperature \u2192 Increase irrigation frequency."
+      }
+    },
+    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 9, Moderate Stress)**\n\n#### **Key Issues:**\n1. **Insufficient Water Allocation** \u2013 Only **5kL** for **risk 9** (needs **10kL+** for heat + nutrient stress).\n2. **Overlapping Reactive Actions** \u2013 Pesticide (disease) conflicts with **heat/soil stress** management.\n3. **No Proactive Heat Mitigation** \u2013 Missing sensors, shade, or cooling.\n4. **Budget Underutilization** \u2013 Only **$4.6k spent** out of **$50k** (underoptimized).\n\n---\n\n### **Improvement Suggestions:**\n- **Double Irrigation (15kL)** + **soil moisture sensors (INR 1k)** for real-time monitoring.\n- **Add Heat Control:** Shade cloth (INR 5k) or cooling fans (INR 3k).\n- **Prioritize Nutrients:** Replace **soil amendment (INR 2k)** with **resistant seeds (INR 2k)** or **biological controls (INR 1.5k)**.\n- **Dynamic Adjustments:** Delay pesticide if pest risk drops; **scouting \u2192 amendment \u2192 irrigation (15kL) \u2192 nutrient check**.\n\n---\n### **Mistakes to Avoid:**\n- Ignoring **heat stress** (no proactive cooling).\n- Over-relying on **reactive pesticide** (low-severity pest risk).\n- **Single-threaded approach** (mixed stress requires layered defense).\n- **Underfunding for risk 9** (5kL water is insufficient).\n\n---\n### **Optimization Ideas:**\n- **Budget Efficiency:** Use **INR 8k** for **sensors + shade + cooling fans** (total **INR 12k**).\n- **Action Chaining:** **Scouting \u2192 Soil Amendment \u2192 Irrigation (15kL) \u2192 Nutrient Check \u2192 Pesticide (if needed)**.\n- **Emergency Plan:** For **risk \u22659**, trigger **15kL irrigation + sensors + shade (INR 8k)**."
+  },
+  {
+    "timestamp": "2026-07-14T15:57:29.817713",
+    "applied_strategy": "System Status: Alert (Critical conditions detected) Key Problems: 1. Heat Stress Risk (Confidence: 90%) - Soil/Moisture: 100% (likely saturated, reducing oxygen for roots). - Temperature: 60\u00b0C (extreme; crops may wilt or die). - Action: Irrigation (5KL) is planned but may be insufficient\u2014overwatering risk if soil drains poorly. 2. Anomaly Risk (Confidence: 90%) - Nutrient Imbalance: Nitrogen (40)  | Analysis for Current Run (optimize, Risk Score = 9, Moderate Stress) Key Issues: 1. Insufficient Water Allocation \u2013 Only 5kL for risk 9 (needs 10kL+ for heat + nutrient stress). 2. Overlapping Reactive Actions \u2013 Pesticide (disease) conflicts with heat/soil stress management. 3. No Proactive Heat Mitigation \u2013 Missing sensors, shade, or cooling. 4. Budget Underutilization \u2013 Only $4.6k spent out of $",
+    "source": "dashboard_apply_button"
+  },
+  {
+    "timestamp": "2026-07-14T15:59:08.909850",
+    "run": {
+      "strategy": "low_cost",
+      "budget": 49848.0,
+      "water": 25000.0,
+      "risk_score": 9,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-14T15:59:03.689507",
+            "end": "2026-07-14T17:59:03.689507",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T21:59:03.689507",
+            "end": "2026-07-14T23:59:03.689507",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "soil_amendment",
+            "cost_inr": 2000.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T19:59:03.689507",
+            "end": "2026-07-14T21:59:03.689507",
+            "notes": "Risk: anomaly | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-14T23:59:03.689507",
+            "end": "2026-07-15T01:59:03.689507",
+            "notes": "Risk: disease | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 4600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 1.0,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-14T15:59:03.709040"
+      },
+      "actions": {
+        "irrigation": "High temperature \u2192 Increase irrigation frequency."
+      }
+    },
+    "insight": "### **Analysis of `low_cost` Run (Risk Score = 9, Moderate Stress)**\n\n#### **Key Issues:**\n1. **Insufficient Water Allocation** \u2013 Only **5kL** for **risk 9** (needs **10kL+** for heat + nutrient stress).\n2. **No Proactive Heat Mitigation** \u2013 Missing sensors, shade, or cooling despite extreme heat (60\u00b0C).\n3. **Overlapping Reactive Actions** \u2013 Pesticide conflicts with **heat/soil stress** management.\n4. **Budget Underutilization** \u2013 **$4.6k spent** out of **$49.8k** (wasted potential).\n\n---\n\n### **Improvement Suggestions:**\n- **Double Irrigation (10kL)** + **soil moisture sensors (INR 1k)** for real-time monitoring.\n- **Add Heat Control:** **Shade cloth (INR 5k)** or **cooling fans (INR 3k)**.\n- **Prioritize Nutrients:** Replace **soil amendment (INR 2k)** with **resistant seeds (INR 2k)** or **biological controls (INR 1.5k)**.\n- **Dynamic Adjustments:** **Scouting \u2192 Soil Amendment \u2192 Irrigation (10kL) \u2192 Nutrient Check \u2192 Pesticide (if needed)**.\n\n---\n\n### **Mistakes to Avoid:**\n- Ignoring **heat stress** (no proactive cooling).\n- Over-relying on **reactive pesticide** (low-severity pest risk).\n- **Single-threaded approach** (mixed stress requires layered defense).\n- **Underfunding for critical needs** (5kL water is insufficient).\n\n---\n### **Optimization Ideas:**\n- **Budget Efficiency:** Allocate **INR 10k** for **sensors + shade + cooling fans** (total **INR 15k**).\n- **Action Chaining:** **Real-time monitoring \u2192 Adjust irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**.\n- **Emergency Plan:** For **risk \u22659**, trigger **10kL irrigation + sensors + shade (INR 10k)**."
+  },
+  {
+    "timestamp": "2026-07-14T16:03:18.783658",
+    "run": {
+      "strategy": "optimize",
+      "budget": 30000.0,
+      "water": 20000.0,
+      "risk_score": 5,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-14T16:03:13.161921",
+            "end": "2026-07-14T18:03:13.161921",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T18:03:13.161921",
+            "end": "2026-07-14T20:03:13.161921",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-14T20:03:13.161921",
+            "end": "2026-07-14T22:03:13.161921",
+            "notes": "Risk: pest | Severity: 0.50 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 2600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 0.95,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-14T16:03:13.180950"
+      },
+      "actions": {
+        "irrigation": "High temperature \u2192 Increase irrigation frequency."
+      }
+    },
+    "insight": "### **Analysis of Current Run (`optimize`, Risk Score = 5, Low-Moderate Stress)**\n\n#### **Key Issues:**\n1. **Insufficient Water Allocation** \u2013 Only **5kL** for **risk 5** (needs **8kL+** for heat + nutrient stress).\n2. **Overlapping Reactive Actions** \u2013 Pesticide (low-severity pest risk) conflicts with irrigation focus.\n3. **No Proactive Heat/Nutrient Defense** \u2013 Missing sensors, shade, or real-time monitoring.\n4. **Budget Underutilization** \u2013 **$2.6k spent** out of **$30k** (wasted potential).\n\n---\n\n### **Improvement Suggestions:**\n- **Enhance Water Allocation:** Increase irrigation to **10kL** (budget: **INR 1.6k**).\n- **Add Proactive Tools:** Soil sensors (**INR 1k**), shade cloth (**INR 3k**), or cooling fans (**INR 2k**).\n- **Prioritize Nutrients:** Replace soil amendment with **resistant seeds (INR 2k)** or **biological controls (INR 1.5k)**.\n- **Dynamic Adjustments:** **Scouting \u2192 Irrigation (10kL) \u2192 Nutrient Check \u2192 Pesticide (if needed)**.\n\n---\n### **Mistakes to Avoid:**\n- Ignoring **low-moderate stress** (5kL water is insufficient).\n- Over-relying on **reactive pesticide** (low-severity pest risk).\n- **Single-threaded approach** (mixed stress needs layered defense).\n- **Underfunding** (budget wasted on low-impact actions).\n\n---\n### **Optimization Ideas:**\n- **Budget Efficiency:** Allocate **INR 6k** for **sensors + shade + cooling fans** (total **INR 8k**).\n- **Action Chaining:** **Real-time monitoring \u2192 Adjust irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**.\n- **Emergency Plan:** For **risk \u22655**, trigger **10kL irrigation + sensors + shade (INR 6k)**."
+  },
+  {
+    "timestamp": "2026-07-14T16:03:27.023739",
+    "run": {
+      "strategy": "optimize",
+      "budget": 30000.0,
+      "water": 20000.0,
+      "risk_score": 5,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-14T16:03:20.279889",
+            "end": "2026-07-14T18:03:20.279889",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T18:03:20.279889",
+            "end": "2026-07-14T20:03:20.279889",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-14T20:03:20.279889",
+            "end": "2026-07-14T22:03:20.279889",
+            "notes": "Risk: pest | Severity: 0.50 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 2600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 0.95,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-14T16:03:20.291909"
+      },
+      "actions": {
+        "irrigation": "High temperature \u2192 Increase irrigation frequency."
+      }
+    },
+    "insight": "### **Analysis of Current Run (`optimize`, Risk Score = 5, Low-Moderate Stress)**\n\n#### **Key Issues:**\n1. **Insufficient Water Allocation** \u2013 Only **5kL** (needs **8kL+** for risk 5).\n2. **Overlapping Reactive Actions** \u2013 Pesticide (low-severity) conflicts with irrigation focus.\n3. **No Proactive Defense** \u2013 Missing sensors, shade, or real-time monitoring.\n4. **Budget Underutilization** \u2013 **$2.6k spent** out of **$30k** wasted.\n\n---\n\n### **Improvement Suggestions:**\n- **Enhance Water Allocation:** Increase irrigation to **10kL** (budget: **INR 1.6k**).\n- **Add Proactive Tools:** Soil sensors (**INR 1k**), shade cloth (**INR 3k**), or cooling fans (**INR 2k**).\n- **Prioritize Nutrients:** Replace soil amendment with **resistant seeds (INR 2k)** or **biological controls (INR 1.5k)**.\n- **Dynamic Adjustments:** **Scouting \u2192 Irrigation (10kL) \u2192 Nutrient Check \u2192 Pesticide (if needed)**.\n\n---\n### **Mistakes to Avoid:**\n- Ignoring **low-moderate stress** (5kL water is insufficient).\n- Over-relying on **reactive pesticide** (low-severity pest risk).\n- **Single-threaded approach** (mixed stress needs layered defense).\n- **Underfunding** (budget wasted on low-impact actions).\n\n---\n### **Optimization Ideas:**\n- **Budget Efficiency:** Allocate **INR 6k** for **sensors + shade + cooling fans** (total **INR 8k**).\n- **Action Chaining:** **Real-time monitoring \u2192 Adjust irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**.\n- **Emergency Plan:** For **risk \u22655**, trigger **10kL irrigation + sensors + shade (INR 6k)**."
+  },
+  {
+    "timestamp": "2026-07-14T16:03:33.426937",
+    "run": {
+      "strategy": "optimize",
+      "budget": 30000.0,
+      "water": 20000.0,
+      "risk_score": 8,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-14T20:03:28.358092",
+            "end": "2026-07-14T22:03:28.358092",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T18:03:28.358092",
+            "end": "2026-07-14T20:03:28.358092",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-15T00:03:28.358092",
+            "end": "2026-07-15T02:03:28.358092",
+            "notes": "Risk: pest | Severity: 0.50 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 2600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 0.66,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-14T16:03:28.377633"
+      },
+      "actions": {
+        "irrigation": "High temperature \u2192 Increase irrigation frequency."
+      }
+    },
+    "insight": "### **Analysis of Current Run (`optimize`, Risk Score = 8, Water Stress + Heat)**\n\n#### **Key Issues:**\n1. **Insufficient Water Allocation** \u2013 Only **5kL** for **risk 8** (needs **12kL+** for water + heat stress).\n2. **Overlapping Reactive Actions** \u2013 Pesticide (low-severity) conflicts with **water/heat management**.\n3. **No Proactive Mitigation** \u2013 Missing sensors, shade, or **emergency cooling**.\n4. **Budget Underutilization** \u2013 **$2.6k spent** out of **$30k** (wasted).\n\n---\n\n### **Improvement Suggestions:**\n- **Double Irrigation (15kL)** + **soil moisture sensors (INR 1k)** for real-time monitoring.\n- **Add Heat Mitigation:** **Shade cloth (INR 5k)** or **cooling fans (INR 3k)**.\n- **Prioritize Water Efficiency:** Replace **pesticide (INR 1.5k)** with **biological controls (INR 1.5k)**.\n- **Dynamic Adjustments:** **Scouting \u2192 Irrigation (15kL) \u2192 Nutrient Check \u2192 Pesticide (if needed)**.\n\n---\n\n### **Mistakes to Avoid:**\n- Ignoring **water + heat stress** (5kL is insufficient).\n- Over-relying on **reactive pesticide** (low-severity pest risk).\n- **Single-threaded approach** (mixed stress needs layered defense).\n- **Underfunding critical needs** (no sensors/shade).\n\n---\n### **Optimization Ideas:**\n- **Budget Efficiency:** Allocate **INR 10k** for **sensors + shade + cooling fans** (total **INR 15k**).\n- **Action Chaining:** **Real-time monitoring \u2192 Adjust irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**.\n- **Emergency Plan:** For **risk \u22658**, trigger **15kL irrigation + sensors + shade (INR 10k)**."
+  },
+  {
+    "timestamp": "2026-07-14T16:03:40.008467",
+    "run": {
+      "strategy": "optimize",
+      "budget": 30000.0,
+      "water": 20000.0,
+      "risk_score": 8,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-14T20:03:34.791916",
+            "end": "2026-07-14T22:03:34.791916",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T18:03:34.791916",
+            "end": "2026-07-14T20:03:34.791916",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-15T00:03:34.791916",
+            "end": "2026-07-15T02:03:34.791916",
+            "notes": "Risk: pest | Severity: 0.50 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 2600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 0.66,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-14T16:03:34.804423"
+      },
+      "actions": {
+        "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+      }
+    },
+    "insight": "### **Analysis of Current Run (`optimize`, Risk Score = 8)**\n\n#### **Key Issues:**\n1. **Insufficient Water Allocation** \u2013 Only **5kL** (needs **15kL+** for **water + heat stress**).\n2. **Overlapping Reactive Actions** \u2013 Pesticide (low-severity) conflicts with **critical water/heat management**.\n3. **No Proactive Mitigation** \u2013 Missing **real-time sensors, shade, or cooling**.\n4. **Budget Underutilization** \u2013 **$2.6k spent** out of **$30k** wasted.\n\n---\n\n### **Improvement Suggestions:**\n\u2705 **Double Irrigation (15kL)** + **soil moisture sensors (INR 1k)** for real-time monitoring.\n\u2705 **Add Heat Mitigation:** **Shade cloth (INR 5k)** or **cooling fans (INR 3k)**.\n\u2705 **Replace Pesticide:** Use **biological controls (INR 1.5k)** for pest management.\n\u2705 **Dynamic Priority:** **Scouting \u2192 Irrigation (15kL) \u2192 Nutrient Check \u2192 Pesticide (if needed)**.\n\n---\n### **Mistakes to Avoid:**\n\u274c Ignore **critical water/heat stress** (5kL is insufficient).\n\u274c Over-rely on **low-severity pesticide** (prioritize water/heat).\n\u274c **No proactive defense** (missing sensors/shade).\n\u274c **Single-threaded approach** (mixed stress needs layered defense).\n\n---\n### **Optimization Ideas:**\n\ud83d\udd39 **Budget Efficiency:** Allocate **INR 10k** for **sensors + shade + cooling fans** (total **INR 15k**).\n\ud83d\udd39 **Emergency Plan:** For **risk \u22658**, trigger **15kL irrigation + sensors + shade (INR 10k)**.\n\ud83d\udd39 **Action Chaining:** **Real-time monitoring \u2192 Adjust irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**."
+  },
+  {
+    "timestamp": "2026-07-14T16:03:46.807327",
+    "run": {
+      "strategy": "optimize",
+      "budget": 30000.0,
+      "water": 20000.0,
+      "risk_score": 8,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-14T20:03:41.295047",
+            "end": "2026-07-14T22:03:41.295047",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T18:03:41.295047",
+            "end": "2026-07-14T20:03:41.295047",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-15T00:03:41.295047",
+            "end": "2026-07-15T02:03:41.295047",
+            "notes": "Risk: pest | Severity: 0.50 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 2600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 0.66,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-14T16:03:41.307568"
+      },
+      "actions": {
+        "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+      }
+    },
+    "insight": "### **Analysis of Current Run (`optimize`, Risk Score = 8)**\n\n#### **Key Issues:**\n1. **Water Shortfall** \u2013 Only **5kL** for **risk 8** (needs **15kL+** for water + heat stress).\n2. **Overlapping Actions** \u2013 Pesticide (low-severity) conflicts with **critical water/heat management**.\n3. **No Proactive Mitigation** \u2013 Missing **real-time sensors, shade, or cooling**.\n4. **Budget Inefficiency** \u2013 **$2.6k spent** out of **$30k** wasted on reactive fixes.\n\n---\n\n### **Improvement Suggestions:**\n\u2705 **Double Irrigation (15kL)** + **soil moisture sensors (INR 1k)** for real-time adjustments.\n\u2705 **Add Heat Mitigation:** **Shade cloth (INR 5k)** or **cooling fans (INR 3k)**.\n\u2705 **Replace Pesticide:** Use **biological controls (INR 1.5k)** for pest management.\n\u2705 **Dynamic Prioritization:** **Scouting \u2192 Immediate 15kL irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**.\n\n---\n\n### **Mistakes to Avoid:**\n\u274c Ignore **critical water/heat stress** (5kL is insufficient).\n\u274c Over-rely on **low-severity pesticide** (prioritize water/heat).\n\u274c **No proactive defense** (missing sensors/shade).\n\u274c **Single-threaded approach** (mixed stress needs layered defense).\n\n---\n### **Optimization Ideas:**\n\ud83d\udd39 **Budget Efficiency:** Allocate **INR 10k** for **sensors + shade + cooling fans** (total **INR 15k**).\n\ud83d\udd39 **Emergency Plan:** **15kL irrigation + sensors + shade (INR 10k)** for **risk \u22658**.\n\ud83d\udd39 **Action Chaining:** **Real-time monitoring \u2192 Adjust irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**."
+  },
+  {
+    "timestamp": "2026-07-14T16:04:15.277543",
+    "run": {
+      "strategy": "optimize",
+      "budget": 30000.0,
+      "water": 20000.0,
+      "risk_score": 5,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-14T16:04:09.505352",
+            "end": "2026-07-14T18:04:09.505352",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T18:04:09.505352",
+            "end": "2026-07-14T20:04:09.505352",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-14T20:04:09.505352",
+            "end": "2026-07-14T22:04:09.505352",
+            "notes": "Risk: pest | Severity: 0.50 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 2600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 0.95,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-14T16:04:09.516865"
+      },
+      "actions": {
+        "irrigation": "High temperature \u2192 Increase irrigation frequency."
+      }
+    },
+    "insight": "### **Analysis Summary (Risk Score 5, Heat Stress Focus)**\n\n#### **Key Issues:**\n1. **Insufficient Water Allocation** \u2013 Only **5kL** (needs **8kL+** for heat stress).\n2. **Overlapping Reactive Actions** \u2013 Pesticide (low-severity pest risk) conflicts with irrigation focus.\n3. **No Proactive Defense** \u2013 Missing sensors, shade, or real-time monitoring.\n4. **Budget Underutilization** \u2013 **$2.6k spent** out of **$30k** wasted.\n\n---\n\n### **Improvement Suggestions:**\n\u2705 **Increase Irrigation to 10kL** (budget: **INR 1.6k**).\n\u2705 **Add Proactive Tools:**\n   - **Soil sensors (INR 1k)** for real-time monitoring.\n   - **Shade cloth (INR 3k)** or **cooling fans (INR 2k)**.\n\u2705 **Replace Pesticide with:**\n   - **Resistant seeds (INR 2k)** or **biological controls (INR 1.5k)**.\n\u2705 **Dynamic Action Chaining:**\n   **Scouting \u2192 10kL Irrigation \u2192 Nutrient Check \u2192 Pesticide (if needed).**\n\n---\n\n### **Mistakes to Avoid:**\n\u274c Ignore **low-moderate heat stress** (5kL water is insufficient).\n\u274c Over-rely on **low-severity pesticide** (prioritize water/heat).\n\u274c **Single-threaded approach** (mixed stress needs layered defense).\n\u274c **Underfunding critical needs** (no sensors/shade).\n\n---\n### **Optimization Ideas:**\n\ud83d\udd39 **Budget Efficiency:** Allocate **INR 6k** for **sensors + shade + cooling fans** (total **INR 8k**).\n\ud83d\udd39 **Emergency Plan:** For **risk \u22655**, trigger **10kL irrigation + sensors + shade (INR 6k)**.\n\ud83d\udd39 **Action Chaining:** **Real-time monitoring \u2192 Adjust irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**."
+  },
+  {
+    "timestamp": "2026-07-14T16:04:21.561252",
+    "run": {
+      "strategy": "optimize",
+      "budget": 30000.0,
+      "water": 20000.0,
+      "risk_score": 8,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-14T20:04:16.610512",
+            "end": "2026-07-14T22:04:16.610512",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T18:04:16.610512",
+            "end": "2026-07-14T20:04:16.610512",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-15T00:04:16.610512",
+            "end": "2026-07-15T02:04:16.610512",
+            "notes": "Risk: pest | Severity: 0.50 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 2600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 0.66,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-14T16:04:16.622530"
+      },
+      "actions": {
+        "irrigation": "High temperature \u2192 Increase irrigation frequency."
+      }
+    },
+    "insight": "### **Analysis & Recommendations (Risk Score 8, Water + Heat Stress)**\n\n#### **Key Issues**\n1. **Insufficient Water Allocation** \u2013 Only **5kL** (needs **15kL+** for risk 8).\n2. **Overlapping Reactive Actions** \u2013 Pesticide (low-severity) conflicts with **critical water/heat management**.\n3. **No Proactive Mitigation** \u2013 Missing sensors, shade, or cooling.\n4. **Budget Underutilization** \u2013 **$2.6k spent** (wasted on reactive fixes).\n\n---\n\n### **Improvement Suggestions**\n\u2705 **Double Irrigation (15kL)** + **soil moisture sensors (INR 1k)** for real-time adjustments.\n\u2705 **Add Heat Mitigation:** **Shade cloth (INR 5k)** or **cooling fans (INR 3k)**.\n\u2705 **Replace Pesticide:** Use **biological controls (INR 1.5k)**.\n\u2705 **Dynamic Prioritization:** **Scouting \u2192 Immediate 15kL irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**.\n\n---\n\n### **Mistakes to Avoid**\n\u274c Ignore **critical water/heat stress** (5kL is insufficient).\n\u274c Over-rely on **low-severity pesticide** (prioritize water/heat).\n\u274c **No proactive defense** (missing sensors/shade).\n\u274c **Single-threaded approach** (mixed stress needs layered defense).\n\n---\n### **Optimization Ideas**\n\ud83d\udd39 **Budget Efficiency:** Allocate **INR 10k** for **sensors + shade + cooling fans** (total **INR 15k**).\n\ud83d\udd39 **Emergency Plan:** **15kL irrigation + sensors + shade (INR 10k)** for **risk \u22658**.\n\ud83d\udd39 **Action Chaining:** **Real-time monitoring \u2192 Adjust irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**."
+  },
+  {
+    "timestamp": "2026-07-14T16:04:30.629968",
+    "run": {
+      "strategy": "optimize",
+      "budget": 30000.0,
+      "water": 20000.0,
+      "risk_score": 8,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-14T20:04:22.945724",
+            "end": "2026-07-14T22:04:22.945724",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T18:04:22.945724",
+            "end": "2026-07-14T20:04:22.945724",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-15T00:04:22.945724",
+            "end": "2026-07-15T02:04:22.945724",
+            "notes": "Risk: pest | Severity: 0.50 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 2600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 0.66,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-14T16:04:22.959753"
+      },
+      "actions": {
+        "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+      }
+    },
+    "insight": "### **Analysis of Patterns & Recommendations**\n\n#### **Key Issues Across Runs:**\n1. **Insufficient Water Allocation**\n   - **5kL** is insufficient for **risk 8** (needs **15kL+** for water + heat stress).\n   - **Heat stress** requires **8\u201310kL** (not met in high-risk scenarios).\n\n2. **Overlapping Reactive Actions**\n   - **Pesticide (low-severity)** conflicts with **critical water/heat management**.\n   - **Single-threaded approach** fails to address **multi-stress layers**.\n\n3. **No Proactive Mitigation**\n   - Missing **sensors, shade, or cooling** despite high risk.\n\n4. **Budget Underutilization**\n   - **$2.6k spent** (20% of $30k) on reactive fixes; **$27.4k wasted**.\n\n---\n\n### **Improvement Suggestions**\n\u2705 **Double Irrigation (15kL)** + **soil moisture sensors (INR 1k)** for real-time adjustments.\n\u2705 **Add Heat Mitigation:**\n   - **Shade cloth (INR 5k)** or **cooling fans (INR 3k)**.\n\u2705 **Replace Pesticide:**\n   - **Biological controls (INR 1.5k)** or **resistant seeds (INR 2k)**.\n\u2705 **Dynamic Prioritization:**\n   **Scouting \u2192 Immediate 15kL irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**.\n\n---\n### **Mistakes to Avoid**\n\u274c Ignore **critical water/heat stress** (5kL is insufficient).\n\u274c Over-rely on **low-severity pesticide** (prioritize water/heat).\n\u274c **No proactive defense** (missing sensors/shade).\n\u274c **Single-threaded approach** (mixed stress needs layered defense).\n\n---\n### **Optimization Ideas**\n\ud83d\udd39 **Budget Efficiency:**\n   - **INR 10k** for **sensors + shade + cooling fans** (total **INR 15k**).\n\ud83d\udd39 **Emergency Plan:**\n   - **15kL irrigation + sensors + shade (INR 10k)** for **risk \u22658**.\n\ud83d\udd39 **Action Chaining:**\n   **Real-time monitoring \u2192 Adjust irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**.\n\n---\n**Key Takeaway:** *Shift from reactive fixes to proactive, layered defense with real-time adjustments.*"
+  },
+  {
+    "timestamp": "2026-07-14T16:05:56.823800",
+    "run": {
+      "strategy": "optimize",
+      "budget": 48083.0,
+      "water": 19485.0,
+      "risk_score": 3,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-14T16:05:51.421429",
+            "end": "2026-07-14T18:05:51.421429",
+            "notes": "Risk: disease | Severity: 1.00 | Confidence: 0.90"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T18:05:51.421429",
+            "end": "2026-07-14T20:05:51.421429",
+            "notes": "Risk: disease | Severity: 1.00 | Confidence: 0.90"
+          }
+        ],
+        "total_cost_inr": 1800.0,
+        "total_water_liters": 200.0,
+        "expected_risk_reduction": 0.95,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-14T16:05:51.442991"
+      },
+      "actions": {}
+    },
+    "insight": "### **Analysis & Recommendations (Risk Score 3, Disease Focus)**\n\n#### **Key Issues:**\n1. **Overly Reactive Approach** \u2013 Only **pesticide + scouting** (no water/heat mitigation).\n2. **Underutilized Budget** \u2013 **$48k budget** wasted on **$1.8k spent** (96% unused).\n3. **No Proactive Defense** \u2013 Missing **soil health checks, irrigation, or cooling**.\n4. **Single-Strand Focus** \u2013 Ignores **multi-stress layers** (e.g., water/heat risks).\n\n#### **Improvement Suggestions:**\n\u2705 **Add Water Mitigation:**\n   - **Soil moisture sensors (INR 1k)** + **10kL irrigation** (budget: **INR 2k**).\n\u2705 **Enhance Disease Control:**\n   - **Biological fungicides (INR 1.5k)** or **resistant crop varieties (INR 2k)**.\n\u2705 **Proactive Monitoring:**\n   - **Early warning sensors (INR 1k)** + **nutrient check (INR 1k)**.\n\u2705 **Dynamic Prioritization:**\n   **Scouting \u2192 Irrigation (10kL) \u2192 Pesticide (if needed) \u2192 Nutrient Check**.\n\n#### **Mistakes to Avoid:**\n\u274c Ignore **non-disease risks** (water/heat stress).\n\u274c **Over-rely on pesticide** (high cost, low sustainability).\n\u274c **No proactive defense** (missing sensors, irrigation, or cooling).\n\u274c **Budget waste** (96% unused\u2014redirect to critical needs).\n\n#### **Optimization Ideas:**\n\ud83d\udd39 **Budget Efficiency:**\n   - **INR 5k** for **sensors + irrigation + biological controls** (total **INR 6.5k**).\n\ud83d\udd39 **Emergency Plan:**\n   - **10kL irrigation + sensors (INR 3k)** for **risk \u22653**.\n\ud83d\udd39 **Action Chaining:**\n   **Real-time monitoring \u2192 Adjust irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**."
+  },
+  {
+    "timestamp": "2026-07-14T16:11:46.239021",
+    "run": {
+      "strategy": "optimize",
+      "budget": 30000.0,
+      "water": 20000.0,
+      "risk_score": 8,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-14T20:11:41.508679",
+            "end": "2026-07-14T22:11:41.508679",
+            "notes": "Risk: water_stress | Severity: 0.48 | Confidence: 0.65"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T18:11:41.508679",
+            "end": "2026-07-14T20:11:41.508679",
+            "notes": "Risk: heat_stress | Severity: 0.60 | Confidence: 0.65"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-15T00:11:41.508679",
+            "end": "2026-07-15T02:11:41.508679",
+            "notes": "Risk: pest | Severity: 0.38 | Confidence: 0.55"
+          }
+        ],
+        "total_cost_inr": 2600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 0.649,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-14T16:11:41.530712"
+      },
+      "actions": {
+        "irrigation": "High temperature \u2192 Increase irrigation frequency."
+      }
+    },
+    "insight": "### **Analysis & Recommendations (Risk Score 8, Water + Heat Stress)**\n\n#### **Key Issues:**\n1. **Insufficient Water Allocation** \u2013 Only **5kL** (needs **15kL+** for risk 8).\n2. **Low Severity Confidence** \u2013 Heat/pest risks have **low confidence (0.65\u20130.55)**.\n3. **Overlapping Reactive Actions** \u2013 Pesticide (low-severity) conflicts with critical water/heat.\n4. **No Proactive Defense** \u2013 Missing sensors, shade, or cooling.\n\n#### **Improvement Suggestions:**\n\u2705 **Double Irrigation (15kL)** + **soil moisture sensors (INR 1k)** for real-time adjustments.\n\u2705 **Add Heat Mitigation:** **Shade cloth (INR 5k)** or **cooling fans (INR 3k)**.\n\u2705 **Replace Pesticide:** **Biological controls (INR 1.5k)** or **resistant seeds (INR 2k)**.\n\u2705 **Dynamic Prioritization:** **Scouting \u2192 Immediate 15kL irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**.\n\n#### **Mistakes to Avoid:**\n\u274c Ignore **critical water/heat stress** (5kL insufficient).\n\u274c Over-rely on **low-confidence pesticide** (prioritize water/heat).\n\u274c **No proactive defense** (missing sensors/shade).\n\u274c **Single-threaded approach** (mixed stress needs layered defense).\n\n#### **Optimization Ideas:**\n\ud83d\udd39 **Budget Efficiency:** Allocate **INR 10k** for **sensors + shade + cooling fans** (total **INR 15k**).\n\ud83d\udd39 **Emergency Plan:** **15kL irrigation + sensors + shade (INR 10k)** for **risk \u22658**.\n\ud83d\udd39 **Action Chaining:** **Real-time monitoring \u2192 Adjust irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**."
+  },
+  {
+    "timestamp": "2026-07-14T16:11:52.046409",
+    "run": {
+      "strategy": "optimize",
+      "budget": 30000.0,
+      "water": 20000.0,
+      "risk_score": 8,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-14T20:11:47.620191",
+            "end": "2026-07-14T22:11:47.620191",
+            "notes": "Risk: water_stress | Severity: 1.00 | Confidence: 0.95"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T18:11:47.620191",
+            "end": "2026-07-14T20:11:47.620191",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.95"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-15T00:11:47.620191",
+            "end": "2026-07-15T02:11:47.620191",
+            "notes": "Risk: pest | Severity: 0.38 | Confidence: 0.55"
+          }
+        ],
+        "total_cost_inr": 2600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 0.648,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-14T16:11:47.642227"
+      },
+      "actions": {
+        "irrigation": "Soil is dry \u2192 Increase irrigation immediately."
+      }
+    },
+    "insight": "### **Key Patterns & Recommendations (Risk Score 8, Water + Heat Stress)**\n\n#### **Improvement Suggestions**\n1. **Increase Irrigation to 15kL** (budget: **INR 700**) + **soil moisture sensors (INR 1k)** for real-time adjustments.\n2. **Replace Pesticide** with **biological controls (INR 1.5k)** or **resistant seeds (INR 2k)**.\n3. **Add Heat Mitigation**:\n   - **Shade cloth (INR 5k)** or **cooling fans (INR 3k)**.\n4. **Dynamic Action Chaining**:\n   **Scouting \u2192 15kL Irrigation \u2192 Nutrient Check \u2192 Pesticide (if needed)**.\n\n#### **Mistakes to Avoid**\n\u274c Ignore **critical water/heat stress** (5kL insufficient).\n\u274c Over-rely on **low-confidence pesticide** (prioritize water/heat).\n\u274c **No proactive defense** (missing sensors/shade).\n\u274c **Single-threaded approach** (mixed stress needs layered defense).\n\n#### **Optimization Ideas**\n\ud83d\udd39 **Budget Efficiency**: Allocate **INR 10k** for **sensors + shade + cooling fans** (total **INR 15k**).\n\ud83d\udd39 **Emergency Plan**: **15kL irrigation + sensors + shade (INR 10k)** for **risk \u22658**.\n\ud83d\udd39 **Action Chaining**: **Real-time monitoring \u2192 Adjust irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**."
+  },
+  {
+    "timestamp": "2026-07-14T16:13:39.423849",
+    "run": {
+      "strategy": "optimize",
+      "budget": 45577.0,
+      "water": 21599.0,
+      "risk_score": 9,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-07-14T16:13:32.938981",
+            "end": "2026-07-14T18:13:32.938981",
+            "notes": "Risk: heat_stress | Severity: 1.00 | Confidence: 0.95"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T22:13:32.938981",
+            "end": "2026-07-15T00:13:32.938981",
+            "notes": "Risk: anomaly | Severity: 0.65 | Confidence: 0.70"
+          },
+          {
+            "type": "soil_amendment",
+            "cost_inr": 2000.0,
+            "water_liters": 0.0,
+            "start": "2026-07-14T20:13:32.938981",
+            "end": "2026-07-14T22:13:32.938981",
+            "notes": "Risk: anomaly | Severity: 0.65 | Confidence: 0.70"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-07-15T00:13:32.938981",
+            "end": "2026-07-15T02:13:32.938981",
+            "notes": "Risk: disease | Severity: 0.90 | Confidence: 0.80"
+          }
+        ],
+        "total_cost_inr": 4600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 0.836,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-07-14T16:13:32.961015"
+      },
+      "actions": {
+        "irrigation": "High temperature \u2192 Increase irrigation frequency."
+      }
+    },
+    "insight": "### **Analysis & Recommendations (Risk Score 9, Extreme Heat + Multi-Stress)**\n\n#### **Key Issues:**\n1. **Insufficient Water Allocation** \u2013 Only **5kL** (needs **20kL+** for risk 9).\n2. **Overlapping Reactive Actions** \u2013 Soil amendment/pesticide (low-severity) conflicts with **critical heat/irrigation**.\n3. **No Proactive Defense** \u2013 Missing **sensors, shade, or cooling** despite extreme risk.\n4. **Budget Underutilization** \u2013 **$46k spent** (10% of $45.6k budget) on reactive fixes.\n\n#### **Improvement Suggestions:**\n\u2705 **Double Irrigation (20kL)** + **soil moisture sensors (INR 1k)** for real-time adjustments.\n\u2705 **Add Heat Mitigation:**\n   - **Shade cloth (INR 5k)** or **cooling fans (INR 3k)**.\n\u2705 **Replace Pesticide:** **Biological controls (INR 1.5k)** or **resistant seeds (INR 2k)**.\n\u2705 **Dynamic Prioritization:**\n   **Scouting \u2192 Immediate 20kL irrigation \u2192 Soil amendment \u2192 Pesticide (if needed)**.\n\n#### **Mistakes to Avoid:**\n\u274c Ignore **critical heat/water stress** (5kL insufficient).\n\u274c Over-rely on **low-severity interventions** (prioritize heat/irrigation).\n\u274c **No proactive defense** (missing sensors/shade).\n\u274c **Single-threaded approach** (multi-stress needs layered defense).\n\n#### **Optimization Ideas:**\n\ud83d\udd39 **Budget Efficiency:** Allocate **INR 10k** for **sensors + shade + cooling fans** (total **INR 15k**).\n\ud83d\udd39 **Emergency Plan:** **20kL irrigation + sensors + shade (INR 10k)** for **risk \u22659**.\n\ud83d\udd39 **Action Chaining:** **Real-time monitoring \u2192 Adjust irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**."
+  }
+]

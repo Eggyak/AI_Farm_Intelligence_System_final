@@ -1,0 +1,33 @@
+# Web Framework
+fastapi==0.111.0
+uvicorn==0.23.0
+
+# Data Handling
+pandas==2.2.0
+numpy==1.26.4
+
+# IoT / Messaging
+paho-mqtt==1.6.1        # MQTT client for sensors
+
+# HTTP Requests / APIs
+requests==2.31.0
+
+# Optional: MongoDB storage
+pymongo==4.6.0
+
+# Optional: Time-series storage
+influxdb-client==1.36.0
+
+# Optional: Async tasks
+aiohttp==3.9.3
+
+# Logging / Utilities
+python-dotenv==1.0.0
+
+# Optional: Image handling (satellite / drone imagery)
+opencv-python==4.8.1.78
+Pillow==10.1.0
+
+# LLM: Mistral API is called via `requests` using the MISTRAL_API_KEY
+# environment variable — no extra SDK needed. Model is set in
+# backend/llm_client.py (MISTRAL_MODEL).

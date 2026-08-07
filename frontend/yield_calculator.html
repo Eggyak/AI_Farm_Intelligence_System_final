@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Yield Calculator & Growth Analytics – Agritech Farm</title>
+  <link rel="stylesheet" href="index.css"/>
+  <link rel="stylesheet" href="yield_calculator.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- CHATBOT POPUP -->
+<div class="chatbot-popup hidden" id="chatbotPopup">
+  <div class="chatbot-header">
+    <div class="chatbot-header-title">
+      <span class="chatbot-star-icon">✦</span>
+      <span>NEURAL ASSISTANT</span>
+    </div>
+    <button class="chatbot-x-btn" id="chatbotClose" title="Close">✕</button>
+  </div>
+  <div class="chatbot-body" id="chatMessages">
+    <div class="chat-msg-row bot-row">
+      <div class="chat-avatar bot-av"></div>
+      <div class="chat-bubble bot-bubble">Need advice on optimizing your crop yield? Ask me anything!</div>
+    </div>
+  </div>
+  <div class="chatbot-footer">
+    <input type="text" class="chat-text-input" id="chatInput" placeholder="Type a command…" autocomplete="off"/>
+    <button class="chat-send-btn" id="chatSend">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"/>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- TOP NAV -->
+<header class="topnav">
+  <div class="topnav-left">
+    <span class="brand">AFO: Orchestration</span>
+    <nav class="top-tabs">
+      <a href="index.html" class="tab">Fleet</a>
+      <a href="market.html" class="tab">Market Details</a>
+      <a href="farm_support.html" class="tab">Farm Support</a>
+      <a href="yield_calculator.html" class="tab active">Yield Calculator</a>
+      <a href="dashboard2.html" class="tab">Orchestration</a>
+    </nav>
+  </div>
+  <div class="topnav-right">
+    <span class="avatar">👤</span>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-dot"></div>
+      <div>
+        <div class="brand-name">Verdant Intelligence</div>
+        <div class="brand-sub">HARVEST ANALYTICS:<br/><span class="active-tag">YIELD COMPARATOR</span></div>
+      </div>
+    </div>
+    <button class="chatbot-open-btn" id="openChatbotBtn">💬 Open Chatbot</button>
+    <div class="sidebar-bottom"></div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="page-header-left">
+        <div class="page-eyebrow">AGRICULTURAL PRODUCTIVITY & EFFICIENCY</div>
+        <h1 class="page-title">Yield Calculator & Growth Analytics</h1>
+        <p class="page-desc">Compare previous harvest data (in kgs) with latest yield records to calculate net gain/loss, per-acre efficiency, and financial revenue impact.</p>
+      </div>
+    </div>
+
+    <div class="yield-calc-grid">
+      <!-- INPUT FORM CARD -->
+      <div class="card yield-form-card">
+        <div class="card-title">⚖️ Input Harvest Data</div>
+
+        <form id="yieldForm" onsubmit="return false;">
+          <div class="form-row-2">
+            <div class="form-group">
+              <label>PREVIOUS YIELD (IN KGS) <span class="req">*</span></label>
+              <input type="number" id="prevYield" placeholder="e.g. 1200" step="0.1" required class="custom-input"/>
+            </div>
+            <div class="form-group">
+              <label>LATEST YIELD (IN KGS) <span class="req">*</span></label>
+              <input type="number" id="latestYield" placeholder="e.g. 1550" step="0.1" required class="custom-input"/>
+            </div>
+          </div>
+
+          <div class="form-row-3 mt12">
+            <div class="form-group">
+              <label>CROP NAME</label>
+              <select id="cropSelect" class="custom-select">
+                <option value="Tomato">Tomato</option>
+                <option value="Potato">Potato</option>
+                <option value="Onion">Onion</option>
+                <option value="Wheat">Wheat</option>
+                <option value="Rice">Rice</option>
+                <option value="Cotton">Cotton</option>
+                <option value="Green Chilli">Green Chilli</option>
+              </select>
+            </div>
+            <div class="form-group">
+              <label>LAND AREA (ACRES)</label>
+              <input type="number" id="landAcres" value="2.5" step="0.1" min="0.1" class="custom-input"/>
+            </div>
+            <div class="form-group">
+              <label>MARKET PRICE (₹ / KG)</label>
+              <input type="number" id="pricePerKg" value="28.50" step="0.5" class="custom-input"/>
+            </div>
+          </div>
+
+          <button type="submit" class="btn-calculate-yield" id="calcYieldBtn">
+            🚀 Analyze Yield Growth & Efficiency
+          </button>
+        </form>
+      </div>
+
+      <!-- ANALYSIS RESULT CARD -->
+      <div class="card yield-result-card" id="resultCard">
+        <div class="card-title">📈 Harvest Comparison & AI Agronomy Analysis</div>
+        
+        <div class="analysis-status-badge" id="statusBadge" style="background:#f1f5f9;color:#475569">
+          Enter harvest data above to run analysis
+        </div>
+
+        <div class="yield-comparison-grid">
+          <div class="yc-box">
+            <div class="yc-label">PREVIOUS HARVEST</div>
+            <div class="yc-val" id="resPrevKg">— kg</div>
+            <div class="yc-sub" id="resPrevPerAcre">— kg / acre</div>
+          </div>
+
+          <div class="yc-arrow">➔</div>
+
+          <div class="yc-box highlight">
+            <div class="yc-label">LATEST HARVEST</div>
+            <div class="yc-val green" id="resLatestKg">— kg</div>
+            <div class="yc-sub" id="resLatestPerAcre">— kg / acre</div>
+          </div>
+
+          <div class="yc-box">
+            <div class="yc-label">NET YIELD CHANGE</div>
+            <div class="yc-val" id="resDiffKg">— kg</div>
+            <div class="yc-sub" id="resPctChange">— %</div>
+          </div>
+        </div>
+
+        <!-- REVENUE DELTA BOX -->
+        <div class="revenue-delta-box mt16">
+          <div>
+            <div class="rev-label">PROJECTED FINANCIAL REVENUE DIFFERENCE</div>
+            <div class="rev-value" id="resRevDiff">₹0</div>
+          </div>
+          <div class="rev-details" id="resRevSub">Previous: ₹0 &nbsp;|&nbsp; Latest: ₹0</div>
+        </div>
+
+        <!-- AI ADVISORY BOX -->
+        <div class="ai-agronomy-box mt16">
+          <div class="ai-box-title">✦ AI Agronomy Recommendation</div>
+          <p class="ai-box-text" id="resAiInsight">Run yield analysis to generate agronomy recommendations based on your harvest variance.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- SAVED HISTORY TABLE -->
+    <div class="card yield-history-card mt24">
+      <div class="card-header-row">
+        <span class="card-title">📋 Saved Yield Records History</span>
+        <button class="btn-clear-history" id="clearHistoryBtn">Clear Log</button>
+      </div>
+      <div class="table-responsive">
+        <table class="history-table">
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Crop</th>
+              <th>Previous (kg)</th>
+              <th>Latest (kg)</th>
+              <th>Net Change (kg)</th>
+              <th>Growth (%)</th>
+              <th>Revenue Impact</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="historyTableBody">
+            <tr>
+              <td colspan="8" style="text-align:center;color:#888;padding:20px;">No yield calculations saved yet.</td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="yield_calculator.js"></script>
+</body>
+</html>

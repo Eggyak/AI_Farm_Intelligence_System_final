@@ -1,0 +1,30 @@
+<svg width="1280" height="420" viewBox="0 0 1280 420" fill="none" xmlns="http://www.w3.org/2000/svg">
+  <rect width="1280" height="420" rx="28" fill="#0F172A"/>
+  <rect x="36" y="36" width="1208" height="348" rx="24" fill="url(#bg)"/>
+  <circle cx="1036" cy="114" r="92" fill="#FBBF24" fill-opacity="0.16"/>
+  <circle cx="244" cy="304" r="126" fill="#34D399" fill-opacity="0.14"/>
+  <path d="M220 286C220 242.817 252.817 210 296 210H380C423.183 210 456 242.817 456 286V318H220V286Z" fill="#4B5563"/>
+  <path d="M246 198C246 170.386 268.386 148 296 148H340C367.614 148 390 170.386 390 198V210H246V198Z" fill="#16A34A"/>
+  <path d="M255 242H381" stroke="#F3F4F6" stroke-width="10" stroke-linecap="round"/>
+  <rect x="540" y="142" width="240" height="138" rx="18" fill="#111827" fill-opacity="0.75" stroke="#34D399" stroke-width="2"/>
+  <rect x="571" y="170" width="88" height="18" rx="9" fill="#A7F3D0"/>
+  <rect x="575" y="202" width="148" height="12" rx="6" fill="#D1FAE5"/>
+  <rect x="575" y="226" width="124" height="12" rx="6" fill="#D1FAE5"/>
+  <path d="M820 240C820 198.026 851.026 167 893 167H925C966.974 167 998 198.026 998 240V286H820V240Z" fill="#F59E0B"/>
+  <path d="M842 164C842 135.281 865.281 112 894 112H924C952.719 112 976 135.281 976 164V167H842V164Z" fill="#059669"/>
+  <path d="M868 238H950" stroke="#FFF7ED" stroke-width="11" stroke-linecap="round"/>
+  <path d="M856 260H962" stroke="#FFF7ED" stroke-width="11" stroke-linecap="round"/>
+  <path d="M860 286H958" stroke="#FFF7ED" stroke-width="11" stroke-linecap="round"/>
+  <rect x="1020" y="154" width="130" height="130" rx="20" fill="#0F766E"/>
+  <path d="M1045 248L1070 220L1097 248" stroke="#F0FDF4" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+  <path d="M1070 220V282" stroke="#F0FDF4" stroke-width="10" stroke-linecap="round"/>
+  <text x="120" y="96" fill="#F8FAFC" font-family="Segoe UI, Arial, sans-serif" font-size="44" font-weight="700">Agritech Farm</text>
+  <text x="120" y="140" fill="#A7F3D0" font-family="Segoe UI, Arial, sans-serif" font-size="22">Agentic AI Farm Intelligence System</text>
+  <text x="120" y="182" fill="#E2E8F0" font-family="Segoe UI, Arial, sans-serif" font-size="24">Smart monitoring • AI planning • Farm decision support</text>
+  <defs>
+    <linearGradient id="bg" x1="70" y1="56" x2="1180" y2="360" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#0F766E"/>
+      <stop offset="1" stop-color="#14532D"/>
+    </linearGradient>
+  </defs>
+</svg>
