@@ -217,8 +217,8 @@ def get_market_prices(
     # Attempt fetching live data from Data.gov.in API endpoints if key present
     if data_gov_key and data_gov_key != "your_data_gov_api_key_here":
         endpoints = [
-            f"https://api.data.gov.in/resource/9ef0be3f-083d-458f-96a1-05187e139853?api-key={data_gov_key}&format=json&limit=500",
-            f"https://api.data.gov.in/resource/359084a0-80a6-4a50-a15f-e0238b19a3b6?api-key={data_gov_key}&format=json&limit=500"
+            f"https://api.data.gov.in/resource/9ef0be3f-083d-458f-96a1-05187e139853?api-key={data_gov_key}&format=json&limit=10000",
+            f"https://api.data.gov.in/resource/359084a0-80a6-4a50-a15f-e0238b19a3b6?api-key={data_gov_key}&format=json&limit=10000"
         ]
         for url in endpoints:
             try:
@@ -359,6 +359,49 @@ def get_farm_support(
     support_items.sort(key=lambda x: x["distance_km"])
     return {"status": "success", "user_gps": {"lat": user_lat, "lon": user_lon}, "results": support_items}
 
+# ================= NEARBY BANK LOCATOR =================
+@app.get("/api/nearby-banks")
+def get_nearby_banks(
+    lat: Optional[float] = 30.9010,
+    lon: Optional[float] = 75.8573,
+    radius_m: int = 10000
+):
+    """Return real nearby bank listings from OpenStreetMap for the supplied farm GPS location."""
+    user_lat = lat if lat is not None else 30.9010
+    user_lon = lon if lon is not None else 75.8573
+    safe_radius = min(max(radius_m, 1000), 25000)
+    query = f"[out:json][timeout:12];(node[amenity=bank](around:{safe_radius},{user_lat},{user_lon});way[amenity=bank](around:{safe_radius},{user_lat},{user_lon}););out center 25;"
+    try:
+        response = requests.get(
+            "https://overpass-api.de/api/interpreter",
+            params={"data": query},
+            timeout=18,
+            headers={"User-Agent": "Verdant-Intelligence-Farm-Locator/1.0"}
+        )
+        response.raise_for_status()
+        results = []
+        for entry in response.json().get("elements", []):
+            tags = entry.get("tags", {})
+            bank_lat = entry.get("lat") or entry.get("center", {}).get("lat")
+            bank_lon = entry.get("lon") or entry.get("center", {}).get("lon")
+            if bank_lat is None or bank_lon is None:
+                continue
+            address_parts = [tags.get(key) for key in ("addr:housenumber", "addr:street", "addr:suburb", "addr:city") if tags.get(key)]
+            name = tags.get("name") or tags.get("brand") or "Bank branch"
+            results.append({
+                "name": name,
+                "address": ", ".join(address_parts) or "Address not listed in OpenStreetMap",
+                "distance_km": haversine_km(user_lat, user_lon, bank_lat, bank_lon),
+                "lat": bank_lat,
+                "lon": bank_lon,
+                "phone": tags.get("phone") or tags.get("contact:phone") or "Contact details not listed",
+                "gmaps_url": f"https://www.google.com/maps/search/?api=1&query={bank_lat},{bank_lon}"
+            })
+        results.sort(key=lambda item: item["distance_km"])
+        return {"status": "success", "source": "OpenStreetMap", "user_gps": {"lat": user_lat, "lon": user_lon}, "results": results[:12]}
+    except Exception as err:
+        return {"status": "success", "source": "Map search fallback", "user_gps": {"lat": user_lat, "lon": user_lon}, "results": [], "search_url": f"https://www.google.com/maps/search/banks/@{user_lat},{user_lon},13z", "warning": str(err)}
+
 # ================= YIELD CALCULATOR =================
 @app.post("/api/yield-analysis")
 def calculate_yield(body: dict):
@@ -417,6 +460,94 @@ def calculate_yield(body: dict):
     except Exception as e:
         return {"status": "error", "message": str(e)}
 
+# ================= PLANT GROWTH TRACKER =================
+@app.post("/api/plant-growth")
+def track_plant_growth(body: dict):
+    """
+    Analyzes plant growth metrics between previous and latest measurement logs.
+    Calculates height gain (cm), growth percentage, daily growth rate (cm/day),
+    and generates crop-specific AI agronomy suggestions.
+    """
+    try:
+        crop_name = body.get("crop_name", "Plant").strip()
+        prev_h = float(body.get("previous_height_cm", 0))
+        latest_h = float(body.get("latest_height_cm", 0))
+        days = max(1, int(body.get("days_elapsed", 7)))
+        stage = body.get("stage", "Vegetative")
+        leaf_condition = body.get("leaf_condition", "Healthy").strip()
+
+        diff_cm = latest_h - prev_h
+        pct_growth = round(((diff_cm / prev_h) * 100.0) if prev_h > 0 else 0.0, 1)
+        daily_rate = round(diff_cm / days, 2)
+
+        # Health & Growth Status Assessment
+        if daily_rate >= 1.5:
+            status_tag = "EXCELLENT VIGOROUS GROWTH"
+            status_color = "#10b981"
+            speed_rating = "Fast (Optimal)"
+        elif daily_rate >= 0.5:
+            status_tag = "STABLE HEALTHY GROWTH"
+            status_color = "#3b82f6"
+            speed_rating = "Moderate (Standard)"
+        elif daily_rate > 0:
+            status_tag = "SLUGGISH GROWTH DETECTED"
+            status_color = "#f59e0b"
+            speed_rating = "Below Average"
+        else:
+            status_tag = "STUNTED / RETARDED GROWTH"
+            status_color = "#ef4444"
+            speed_rating = "Stunted"
+
+        # Tailored AI Agronomic Care Suggestions
+        suggestions = []
+
+        # 1. Irrigation suggestion
+        if daily_rate < 0.5:
+            suggestions.append("💧 **Irrigation**: Increase watering frequency by 20%. Ensure root zone soil moisture remains between 45%–60%.")
+        else:
+            suggestions.append("💧 **Irrigation**: Water regime is optimal. Maintain current drip/sprinkler schedule.")
+
+        # 2. Fertilizer / Nutrient suggestion
+        if "yellow" in leaf_condition.lower() or "pale" in leaf_condition.lower():
+            suggestions.append("🧪 **Nutrient Boost**: Yellowing leaves indicate Nitrogen deficiency or iron chlorosis. Applyfoliar spray of NPK 19:19:19 (5g/L water) + chelated Micronutrient zinc/iron.")
+        elif stage == "Vegetative":
+            suggestions.append("🧪 **Fertilizer**: Feed with high-Nitrogen organic compost or Urea solution to boost leaf canopy and stem thickness.")
+        elif stage in ["Flowering", "Fruiting"]:
+            suggestions.append("🌸 **Flowering/Fruiting Care**: Switch to High-Potash & Phosphorus fertilizer (NPK 0:52:34) to enhance flower retention and fruit swelling.")
+        else:
+            suggestions.append("🧪 **Fertilizer**: Apply balanced NPK 20:20:20 once every 14 days.")
+
+        # 3. Physical Care & Support
+        if latest_h > 25 and crop_name.lower() in ["tomato", "green chilli", "cotton", "brinjal", "cucumber"]:
+            suggestions.append("🪴 **Staking Support**: Plant height exceeds 25 cm. Install bamboo stakes or trellis lines to support heavy fruiting branches.")
+        else:
+            suggestions.append("☀️ **Sunlight & Airflow**: Ensure at least 6–8 hours of direct sunlight. Prune bottom yellow leaves for good aeration.")
+
+        # 4. Disease / Pest Precautions
+        suggestions.append("🛡️ **Pest Monitor**: Inspect leaf undersides for aphid or whitefly clusters. Spray Neem oil solution (5ml/L) if pests are detected.")
+
+        insight_summary = f"Your {crop_name} grew **+{diff_cm:.1f} cm** in {days} days ({daily_rate:.2f} cm/day, **{pct_growth:+}%**). Growth rate is **{speed_rating}** for the {stage} stage."
+
+        return {
+            "status": "success",
+            "crop_name": crop_name,
+            "previous_height_cm": prev_h,
+            "latest_height_cm": latest_h,
+            "diff_cm": round(diff_cm, 1),
+            "pct_growth": pct_growth,
+            "days_elapsed": days,
+            "daily_rate_cm": daily_rate,
+            "stage": stage,
+            "leaf_condition": leaf_condition,
+            "status_tag": status_tag,
+            "status_color": status_color,
+            "speed_rating": speed_rating,
+            "insight_summary": insight_summary,
+            "suggestions": suggestions
+        }
+    except Exception as e:
+        return {"status": "error", "message": str(e)}
+
 # ================= CHATBOT =================
 @app.post("/chat")
 def chat(body: dict):
@@ -447,13 +578,19 @@ def chat(body: dict):
             "action_link": "yield_calculator.html",
             "action_text": "🧮 Open Yield Calculator"
         }
+    elif "growth" in msg_lower or "plant height" in msg_lower or "track" in msg_lower or "height" in msg_lower or "photo" in msg_lower:
+        return {
+            "reply": "🌱 **Plant Growth Tracker**: Upload photos of your plant, log height measurements (in cm), compare previous vs. latest photos side-by-side, and receive custom AI agronomy suggestions!",
+            "action_link": "plant_growth.html",
+            "action_text": "🌱 Open Plant Growth Tracker"
+        }
 
     prompt = f"You are Verdant AI, an expert agricultural telemetry assistant. User: {msg}. Give concise, practical advice."
     try:
         reply = mistral_chat([{"role": "user", "content": prompt}])
         return {"reply": reply}
     except Exception as e:
-        return {"reply": f"Ready to assist with your field telemetry, mandi prices, yield calculations, and nearby fertilizer & machinery stores."}
+        return {"reply": f"Ready to assist with your field telemetry, mandi prices, yield calculations, plant growth tracking, and nearby fertilizer & machinery stores."}
 
 if __name__ == "__main__":
     import uvicorn

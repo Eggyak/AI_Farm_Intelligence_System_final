@@ -312,3 +312,4 @@
   color: var(--text-muted);
   font-family: var(--font-mono);
 }
+.market-record-note{margin:-10px 0 16px;color:#4c6250;font:11px var(--font-mono);background:#edf7ee;border:1px solid #d6ecd9;padding:9px 12px;border-radius:8px;}

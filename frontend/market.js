@@ -119,6 +119,13 @@ window.onload = function () {
                 if (kpiSourceSub) {
                     kpiSourceSub.textContent = data.api_key_configured ? "Live Key Configured" : "Paste Key in api_keys.txt";
                 }
+                const cropSuggestions = document.getElementById("cropSuggestions");
+                if (cropSuggestions) {
+                    const crops = [...new Set(allMarketData.map(item => item.commodity).filter(Boolean))].sort((a, b) => a.localeCompare(b));
+                    cropSuggestions.innerHTML = crops.map(crop => `<option value="${crop}"></option>`).join("");
+                }
+                const marketRecordNote = document.getElementById("marketRecordNote");
+                if (marketRecordNote) marketRecordNote.textContent = `Showing all ${allMarketData.length.toLocaleString()} crop and commodity records returned by ${data.source}.`;
                 updateKPIs(allMarketData);
                 renderCards(allMarketData);
             }
@@ -230,6 +237,8 @@ window.onload = function () {
         }
 
         renderCards(filtered);
+        const marketRecordNote = document.getElementById("marketRecordNote");
+        if (marketRecordNote) marketRecordNote.textContent = `Showing ${filtered.length.toLocaleString()} of ${allMarketData.length.toLocaleString()} crop and commodity records.`;
     }
 
     if (searchInput) searchInput.addEventListener("input", applyFilters);

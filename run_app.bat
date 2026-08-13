@@ -25,17 +25,18 @@ start "Agritech Backend Server" /min cmd /c "python -m uvicorn backend.api.serve
 REM Wait 2 seconds for backend initialization
 timeout /t 2 /nobreak >nul
 
-echo [2/3] Starting Frontend Web Server on http://localhost:8000 ...
-start "Agritech Frontend Server" /min cmd /c "python -m http.server 8000 --directory frontend"
+set FRONTEND_PORT=8765
+echo [2/3] Starting Frontend Web Server on http://localhost:%FRONTEND_PORT% ...
+start "Agritech Frontend Server" /min cmd /c "python -m http.server %FRONTEND_PORT% --directory frontend"
 
 echo [3/3] Opening Agritech Farm in your web browser...
 timeout /t 1 /nobreak >nul
-start http://localhost:8000/index.html
+start http://localhost:%FRONTEND_PORT%/index.html?build=%RANDOM%
 
 echo.
 echo =====================================================================
 echo  SUCCESS! Agritech Farm is running locally.
-echo  - Frontend: http://localhost:8000
+echo  - Frontend: http://localhost:%FRONTEND_PORT%
 echo  - Backend API: http://127.0.0.1:8001
 echo  - Data.gov.in key config: api_keys.txt
 echo.

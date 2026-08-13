@@ -31,6 +31,18 @@ body {
   flex-direction: column;
 }
 
+/* Shared language control is deliberately compact so it remains available on every page. */
+.farm-language {
+  border: 1px solid #cfd9cf;
+  background: #fff;
+  color: #23452a;
+  border-radius: 6px;
+  padding: 7px 26px 7px 9px;
+  font: 11px 'IBM Plex Mono', monospace;
+  max-width: 170px;
+}
+html[dir="rtl"] .topnav, html[dir="rtl"] .layout { direction: rtl; }
+
 /* ═══════════════════════════════════════
    CHATBOT POPUP
 ═══════════════════════════════════════ */
@@ -194,20 +206,26 @@ body {
   background: var(--surface);
   border-bottom: 1px solid var(--border);
   padding: 0 20px;
-  height: 48px;
+  min-height: 52px;
   position: sticky;
   top: 0;
   z-index: 100;
 }
-.topnav-left { display: flex; align-items: center; gap: 28px; }
+.topnav-left { display: flex; align-items: center; gap: 18px; min-width: 0; flex: 1; }
 .brand { font-family: var(--font-mono); font-weight: 600; font-size: 14px; color: var(--text-dark); letter-spacing: -0.3px; }
-.top-tabs { display: flex; gap: 2px; }
+.top-tabs { display: flex; gap: 2px; min-width: 0; overflow-x: auto; scrollbar-width: thin; white-space: nowrap; }
 .tab {
-  padding: 4px 14px; font-size: 13px; font-weight: 500; color: var(--text-muted);
+  padding: 14px 10px 10px; font-size: 13px; font-weight: 500; color: var(--text-muted); flex: 0 0 auto;
   text-decoration: none; border-bottom: 2px solid transparent; transition: all 0.2s;
 }
 .tab.active, .tab:hover { color: var(--green-primary); border-bottom-color: var(--green-primary); }
-.topnav-right { display: flex; align-items: center; gap: 10px; }
+.topnav-right { display: flex; align-items: center; gap: 10px; flex: 0 0 auto; }
+@media (max-width: 820px) {
+  .topnav { padding: 0 10px; gap: 6px; }
+  .brand { display: none; }
+  .topnav-left { gap: 0; }
+  .farm-language { width: 45px; padding-right: 4px; color: transparent; }
+}
 .btn-outline {
   padding: 5px 12px; border: 1.5px solid var(--border); background: transparent;
   border-radius: 6px; font-size: 12px; font-family: var(--font-main); cursor: pointer; color: var(--text-dark); transition: 0.2s;
