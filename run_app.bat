@@ -20,6 +20,11 @@ if %errorlevel% neq 0 (
 )
 
 echo [1/3] Launching FastAPI Backend Server on http://127.0.0.1:8001 ...
+python -c "import openpyxl" >nul 2>&1
+if %errorlevel% neq 0 (
+    echo Installing the local Excel account-storage dependency...
+    python -m pip install -r backend\auth_requirements.txt
+)
 start "Agritech Backend Server" /min cmd /c "python -m uvicorn backend.api.server:app --host 127.0.0.1 --port 8001 --reload"
 
 REM Wait 2 seconds for backend initialization
@@ -31,7 +36,7 @@ start "Agritech Frontend Server" /min cmd /c "python -m http.server %FRONTEND_PO
 
 echo [3/3] Opening Agritech Farm in your web browser...
 timeout /t 1 /nobreak >nul
-start http://localhost:%FRONTEND_PORT%/index.html?build=%RANDOM%
+start http://localhost:%FRONTEND_PORT%/login.html?build=%RANDOM%
 
 echo.
 echo =====================================================================

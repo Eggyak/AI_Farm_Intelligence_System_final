@@ -2,6 +2,12 @@ import sys
 import os
 import math
 import requests
+import base64
+import hashlib
+import secrets
+import threading
+import time
+import uuid
 from typing import Optional, Dict, Any, List
 
 sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), "..")))
@@ -13,6 +19,7 @@ for stream in (sys.stdout, sys.stderr):
 
 from fastapi import FastAPI, Query
 from fastapi.middleware.cors import CORSMiddleware
+from fastapi.responses import HTMLResponse, RedirectResponse
 from agents.orchestrator import AgentOrchestrator
 from llm_client import mistral_chat
 import progress
@@ -27,6 +34,45 @@ app.add_middleware(
 )
 
 orchestrator = AgentOrchestrator()
+
+# Local authentication storage. Excel is suitable for a demo/small local deployment;
+# move to a database before production or multi-user hosting.
+AUTH_DATA_DIR = os.path.abspath(os.path.join(os.path.dirname(__file__), "..", "data"))
+AUTH_WORKBOOK = os.path.join(AUTH_DATA_DIR, "farmer_accounts.xlsx")
+AUTH_HEADERS = ["User ID", "Full Name", "Phone", "Email", "Password Hash", "Password Salt", "Provider", "Created At", "Last Login"]
+auth_lock = threading.Lock()
+captcha_challenges: Dict[str, Dict[str, Any]] = {}
+google_states: Dict[str, float] = {}
+
+def _auth_workbook():
+    from openpyxl import Workbook, load_workbook
+    os.makedirs(AUTH_DATA_DIR, exist_ok=True)
+    if not os.path.exists(AUTH_WORKBOOK):
+        workbook = Workbook()
+        sheet = workbook.active
+        sheet.title = "Accounts"
+        sheet.append(AUTH_HEADERS)
+        sheet.freeze_panes = "A2"
+        sheet.auto_filter.ref = "A1:I1"
+        for cell in sheet[1]:
+            cell.font = cell.font.copy(bold=True, color="FFFFFF")
+            cell.fill = cell.fill.copy(fgColor="1F6B3A", fill_type="solid")
+        for column, width in zip("ABCDEFGHI", [18, 24, 18, 30, 45, 30, 14, 22, 22]):
+            sheet.column_dimensions[column].width = width
+        workbook.save(AUTH_WORKBOOK)
+    return load_workbook(AUTH_WORKBOOK)
+
+def _hash_password(password: str, salt: Optional[str] = None) -> tuple[str, str]:
+    raw_salt = base64.b64decode(salt) if salt else secrets.token_bytes(16)
+    digest = hashlib.pbkdf2_hmac("sha256", password.encode("utf-8"), raw_salt, 310_000)
+    return base64.b64encode(digest).decode("ascii"), base64.b64encode(raw_salt).decode("ascii")
+
+def _phone_digits(phone: str) -> str:
+    return "".join(char for char in phone if char.isdigit())
+
+def _valid_captcha(captcha_id: str, answer: str) -> bool:
+    item = captcha_challenges.pop(captcha_id, None)
+    return bool(item and item["expires"] > time.time() and secrets.compare_digest(str(item["answer"]), str(answer).strip()))
 
 def load_api_keys() -> Dict[str, str]:
     keys = {}
@@ -194,6 +240,97 @@ def apply_strategy(body: dict):
         return {"status": "saved"}
     except Exception as e:
         return {"status": "error", "message": str(e)}
+
+# ================= LOCAL AUTHENTICATION =================
+@app.get("/api/auth/captcha")
+def get_auth_captcha():
+    first, second = secrets.randbelow(8) + 1, secrets.randbelow(8) + 1
+    captcha_id = uuid.uuid4().hex
+    captcha_challenges[captcha_id] = {"answer": first + second, "expires": time.time() + 300}
+    return {"captcha_id": captcha_id, "question": f"Security check: {first} + {second} = ?", "expires_in": 300}
+
+@app.post("/api/auth/signup")
+def signup(body: dict):
+    name = str(body.get("name", "")).strip()
+    phone = _phone_digits(str(body.get("phone", "")))
+    email = str(body.get("email", "")).strip().lower()
+    password = str(body.get("password", ""))
+    if len(name) < 2 or len(phone) < 10 or len(password) < 8:
+        return {"status": "error", "message": "Enter your name, a valid phone number, and a password of at least 8 characters."}
+    if not _valid_captcha(str(body.get("captcha_id", "")), str(body.get("captcha_answer", ""))):
+        return {"status": "error", "message": "The security answer is incorrect or expired. Please try again."}
+    with auth_lock:
+        workbook = _auth_workbook()
+        sheet = workbook["Accounts"]
+        for row in sheet.iter_rows(min_row=2, values_only=True):
+            if row[2] == phone or (email and row[3] == email):
+                return {"status": "error", "message": "An account already exists with this phone number or email."}
+        password_hash, salt = _hash_password(password)
+        now = __import__("datetime").datetime.utcnow().isoformat(timespec="seconds") + "Z"
+        user_id = "farmer_" + uuid.uuid4().hex[:12]
+        sheet.append([user_id, name, phone, email, password_hash, salt, "password", now, now])
+        workbook.save(AUTH_WORKBOOK)
+    return {"status": "success", "user": {"id": user_id, "name": name, "phone": phone, "email": email}}
+
+@app.post("/api/auth/login")
+def login(body: dict):
+    identifier = str(body.get("identifier", "")).strip().lower()
+    phone_identifier = _phone_digits(identifier)
+    password = str(body.get("password", ""))
+    if not _valid_captcha(str(body.get("captcha_id", "")), str(body.get("captcha_answer", ""))):
+        return {"status": "error", "message": "The security answer is incorrect or expired. Please try again."}
+    with auth_lock:
+        workbook = _auth_workbook()
+        sheet = workbook["Accounts"]
+        for row_number, row in enumerate(sheet.iter_rows(min_row=2, values_only=True), start=2):
+            if row[2] == phone_identifier or row[3] == identifier:
+                password_hash, _ = _hash_password(password, row[5])
+                if secrets.compare_digest(password_hash, row[4]):
+                    now = __import__("datetime").datetime.utcnow().isoformat(timespec="seconds") + "Z"
+                    sheet.cell(row_number, 9).value = now
+                    workbook.save(AUTH_WORKBOOK)
+                    return {"status": "success", "user": {"id": row[0], "name": row[1], "phone": row[2], "email": row[3]}}
+                break
+    return {"status": "error", "message": "Incorrect phone/email or password."}
+
+@app.get("/api/auth/google")
+def google_login():
+    keys = load_api_keys()
+    client_id = keys.get("GOOGLE_CLIENT_ID", "").strip()
+    if not client_id or client_id == "your_google_client_id_here":
+        return {"status": "error", "message": "Google sign-in is not configured. Add GOOGLE_CLIENT_ID and GOOGLE_CLIENT_SECRET to api_keys.txt."}
+    state = secrets.token_urlsafe(24)
+    google_states[state] = time.time() + 600
+    redirect_uri = "http://127.0.0.1:8001/api/auth/google/callback"
+    params = {"client_id": client_id, "redirect_uri": redirect_uri, "response_type": "code", "scope": "openid email profile", "state": state, "access_type": "online", "prompt": "select_account"}
+    return RedirectResponse("https://accounts.google.com/o/oauth2/v2/auth?" + requests.compat.urlencode(params))
+
+@app.get("/api/auth/google/callback")
+def google_callback(code: str, state: str):
+    if google_states.pop(state, 0) < time.time():
+        return HTMLResponse("<h2>Google sign-in expired. Please try again.</h2>", status_code=400)
+    keys = load_api_keys()
+    try:
+        token = requests.post("https://oauth2.googleapis.com/token", data={"code": code, "client_id": keys.get("GOOGLE_CLIENT_ID", ""), "client_secret": keys.get("GOOGLE_CLIENT_SECRET", ""), "redirect_uri": "http://127.0.0.1:8001/api/auth/google/callback", "grant_type": "authorization_code"}, timeout=12).json()
+        profile = requests.get("https://www.googleapis.com/oauth2/v2/userinfo", headers={"Authorization": f"Bearer {token['access_token']}"}, timeout=12).json()
+        email, name = profile.get("email", "").lower(), profile.get("name", "Farmer")
+        if not email:
+            raise ValueError("Google did not return an email address")
+        with auth_lock:
+            workbook, created = _auth_workbook(), False
+            sheet = workbook["Accounts"]
+            existing = next((row for row in sheet.iter_rows(min_row=2, values_only=True) if row[3] == email), None)
+            if existing:
+                user = {"id": existing[0], "name": existing[1], "phone": existing[2], "email": email}
+            else:
+                user = {"id": "google_" + uuid.uuid4().hex[:12], "name": name, "phone": "", "email": email}
+                sheet.append([user["id"], name, "", email, "", "", "google", __import__("datetime").datetime.utcnow().isoformat(timespec="seconds") + "Z", ""])
+                created = True
+            if created: workbook.save(AUTH_WORKBOOK)
+        safe_user = __import__("json").dumps(user).replace("<", "\\u003c")
+        return HTMLResponse(f"<script>localStorage.setItem('farm_user', JSON.stringify({safe_user}));location.href='http://localhost:8765/index.html';</script>")
+    except Exception:
+        return HTMLResponse("<h2>Google sign-in could not be completed. Check your Google OAuth redirect URI and credentials.</h2>", status_code=400)
 
 # ================= MARKET DATA (EVERY SINGLE CROP / DATA.GOV.IN) =================
 @app.get("/api/market-prices")
