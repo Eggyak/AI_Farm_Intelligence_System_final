@@ -1,0 +1,492 @@
+/* ============================================================
+   FARM INTELLIGENCE, SUBSIDIES & WATER STRESS STYLES (farm_intelligence.css)
+   ============================================================ */
+
+.section-container {
+  margin-bottom: 24px;
+}
+
+.section-title-bar {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 16px;
+}
+
+.section-title-bar h2 {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--green-dark);
+}
+
+.sec-icon {
+  font-size: 22px;
+}
+
+/* Subsidies Filter Bar */
+.sub-filter-row {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.sub-search-wrap {
+  width: 100%;
+}
+
+.sub-pills-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+.btn-sub-pill {
+  background: #f1f5f9;
+  border: 1px solid #cbd5e1;
+  color: #334155;
+  padding: 6px 14px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.btn-sub-pill:hover {
+  background: #e2e8f0;
+}
+
+.btn-sub-pill.active {
+  background: var(--green-primary);
+  color: #ffffff;
+  border-color: var(--green-dark);
+  box-shadow: 0 2px 8px rgba(45, 106, 45, 0.25);
+}
+
+/* Subsidies Grid */
+.subsidies-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+  gap: 20px;
+}
+
+.subsidy-card {
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.05);
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.subsidy-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 10px 28px rgba(0,0,0,0.12);
+}
+
+.sub-card-header {
+  padding: 16px;
+  background: linear-gradient(135deg, #183318 0%, #2b592b 100%);
+  color: #ffffff;
+  position: relative;
+}
+
+.sub-cat-badge {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  background: rgba(255,255,255,0.2);
+  padding: 3px 8px;
+  border-radius: 4px;
+  display: inline-block;
+  margin-bottom: 6px;
+}
+
+.sub-title {
+  font-size: 16px;
+  font-weight: 700;
+  line-height: 1.3;
+}
+
+.sub-percent-badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  background: #10b981;
+  color: #ffffff;
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 800;
+  padding: 4px 10px;
+  border-radius: 20px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.sub-card-body {
+  padding: 16px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.sub-benefit-box {
+  background: #f0fdf4;
+  border: 1px solid #bbf7d0;
+  border-radius: 8px;
+  padding: 10px 12px;
+}
+
+.sbb-label {
+  font-size: 9px;
+  font-family: var(--font-mono);
+  color: #166534;
+  font-weight: 700;
+}
+
+.sbb-val {
+  font-size: 13px;
+  font-weight: 700;
+  color: #15803d;
+  margin-top: 2px;
+}
+
+.sub-section-block {
+  font-size: 12px;
+}
+
+.ssb-title {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--text-muted);
+  margin-bottom: 3px;
+}
+
+.ssb-text {
+  color: var(--text-dark);
+  line-height: 1.4;
+}
+
+.btn-apply-portal {
+  margin-top: auto;
+  width: 100%;
+  background: var(--green-primary);
+  color: #ffffff;
+  border: none;
+  padding: 12px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  text-decoration: none;
+  transition: background 0.2s ease, transform 0.1s ease;
+  box-shadow: 0 4px 12px rgba(45, 106, 45, 0.25);
+}
+
+.btn-apply-portal:hover {
+  background: var(--green-dark);
+  transform: translateY(-1px);
+}
+
+/* Water Stress Grid */
+.water-stress-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .water-stress-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.ws-form-card, .ws-result-card {
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.btn-calculate-ws {
+  margin-top: 20px;
+  width: 100%;
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(15, 23, 42, 0.3);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-calculate-ws:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(15, 23, 42, 0.4);
+}
+
+.ws-status-badge {
+  padding: 8px 16px;
+  border-radius: 8px;
+  font-weight: 700;
+  font-size: 12px;
+  font-family: var(--font-mono);
+  text-align: center;
+  margin: 12px 0 16px 0;
+  letter-spacing: 0.5px;
+}
+
+.cwsi-meter-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.cwsi-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 8px;
+}
+
+.cwsi-title {
+  font-size: 10px;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.cwsi-val {
+  font-size: 18px;
+  font-weight: 800;
+  color: #0f172a;
+}
+
+.cwsi-bar-wrap {
+  height: 12px;
+  background: #e2e8f0;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.cwsi-bar-fill {
+  height: 100%;
+  border-radius: 6px;
+  transition: width 0.4s ease;
+}
+
+.cwsi-scale {
+  display: flex;
+  justify-content: space-between;
+  font-size: 9px;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  margin-top: 6px;
+}
+
+.ws-metrics-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.wsm-box {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 12px;
+  text-align: center;
+}
+
+.wsm-label {
+  font-size: 9px;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.wsm-val {
+  font-size: 18px;
+  font-weight: 800;
+  margin: 4px 0 2px 0;
+}
+
+.wsm-val.green { color: #16a34a; }
+.wsm-val.gold { color: #d97706; }
+
+.wsm-sub {
+  font-size: 10px;
+  color: var(--text-mid);
+  font-family: var(--font-mono);
+}
+
+.action-advice-box {
+  background: #eff6ff;
+  border: 1px solid #bfdbfe;
+  border-radius: 12px;
+  padding: 14px 16px;
+}
+
+.aab-title {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  color: #1e40af;
+  font-weight: 700;
+  margin-bottom: 6px;
+}
+
+.aab-text {
+  font-size: 13px;
+  color: #1e3a8a;
+  line-height: 1.5;
+}
+
+/* Farm Image Inspector */
+.farm-inspector-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media (max-width: 900px) {
+  .farm-inspector-grid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.inspector-upload-card, .inspector-results-card {
+  padding: 20px;
+  background: var(--surface);
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+}
+
+.inspect-desc {
+  font-size: 12px;
+  color: var(--text-muted);
+  margin-bottom: 14px;
+}
+
+.farm-drop-area {
+  position: relative;
+  height: 200px;
+  border: 2px dashed #cbd5e1;
+  border-radius: 14px;
+  background: #f8fafc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+
+.farm-drop-area:hover {
+  border-color: var(--green-primary);
+  background: #f0fdf4;
+}
+
+.up-sub {
+  font-size: 10px;
+  color: var(--text-muted);
+}
+
+.btn-inspect-farm {
+  margin-top: 16px;
+  width: 100%;
+  background: linear-gradient(135deg, var(--green-dark) 0%, var(--green-primary) 100%);
+  color: #ffffff;
+  border: none;
+  padding: 14px;
+  border-radius: 10px;
+  font-weight: 700;
+  font-size: 14px;
+  cursor: pointer;
+  box-shadow: 0 4px 14px rgba(45, 106, 45, 0.3);
+  transition: transform 0.15s ease;
+}
+
+.btn-inspect-farm:hover {
+  transform: translateY(-2px);
+}
+
+.inspect-metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.im-box {
+  background: #f8fafc;
+  border: 1px solid #e2e8f0;
+  border-radius: 10px;
+  padding: 10px;
+  text-align: center;
+}
+
+.im-label {
+  font-size: 8px;
+  font-family: var(--font-mono);
+  color: var(--text-muted);
+  font-weight: 700;
+}
+
+.im-val {
+  font-size: 16px;
+  font-weight: 800;
+  color: var(--text-dark);
+  margin: 3px 0;
+}
+
+.im-val.green { color: #16a34a; }
+.im-val.blue { color: #2563eb; }
+
+.im-sub {
+  font-size: 9px;
+  color: var(--text-mid);
+  font-family: var(--font-mono);
+}
+
+.agronomy-notes-box {
+  background: #f8faf8;
+  border: 1px solid #e2e8f0;
+  border-radius: 12px;
+  padding: 14px;
+}
+
+.anb-title {
+  font-size: 11px;
+  font-family: var(--font-mono);
+  font-weight: 700;
+  color: var(--green-dark);
+  margin-bottom: 8px;
+}
+
+.anb-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.anb-list li {
+  font-size: 12px;
+  color: var(--text-dark);
+  background: #ffffff;
+  padding: 8px 12px;
+  border-radius: 8px;
+  border: 1px solid #e2e8f0;
+  line-height: 1.4;
+}

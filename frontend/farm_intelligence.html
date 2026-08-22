@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Farmer Subsidies, Water Stress & Farm Inspector – Agritech Farm</title>
+  <link rel="stylesheet" href="index.css"/>
+  <link rel="stylesheet" href="farm_intelligence.css"/>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:wght@400;500;600&family=DM+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
+</head>
+<body>
+
+<!-- CHATBOT POPUP -->
+<div class="chatbot-popup hidden" id="chatbotPopup">
+  <div class="chatbot-header">
+    <div class="chatbot-header-title">
+      <span class="chatbot-star-icon">✦</span>
+      <span>NEURAL ASSISTANT</span>
+    </div>
+    <button class="chatbot-x-btn" id="chatbotClose" title="Close">✕</button>
+  </div>
+  <div class="chatbot-body" id="chatMessages">
+    <div class="chat-msg-row bot-row">
+      <div class="chat-avatar bot-av"></div>
+      <div class="chat-bubble bot-bubble">Ask me about government subsidies (PM-KISAN, PMKSY, KUSUM), water stress reduction, or farm image inspection!</div>
+    </div>
+  </div>
+  <div class="chatbot-footer">
+    <input type="text" class="chat-text-input" id="chatInput" placeholder="Type a command…" autocomplete="off"/>
+    <button class="chat-send-btn" id="chatSend">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round">
+        <line x1="22" y1="2" x2="11" y2="13"/>
+        <polygon points="22 2 15 22 11 13 2 9 22 2"/>
+      </svg>
+    </button>
+  </div>
+</div>
+
+<!-- TOP NAV -->
+<header class="topnav">
+  <div class="topnav-left">
+    <span class="brand">AFO: Orchestration</span>
+    <nav class="top-tabs">
+      <a href="index.html" class="tab">Fleet</a>
+      <a href="market.html" class="tab">Market Details</a>
+      <a href="farm_support.html" class="tab">Farm Support</a>
+      <a href="yield_calculator.html" class="tab">Yield Calculator</a>
+      <a href="plant_growth.html" class="tab">Plant Growth</a>
+      <a href="farm_intelligence.html" class="tab active">Farm Intelligence</a>
+      <a href="dashboard2.html" class="tab">Orchestration</a>
+    </nav>
+  </div>
+  <div class="topnav-right">
+    <span class="avatar">👤</span>
+  </div>
+</header>
+
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <aside class="sidebar">
+    <div class="sidebar-brand">
+      <div class="brand-dot"></div>
+      <div>
+        <div class="brand-name">Verdant Intelligence</div>
+        <div class="brand-sub">FARM PORTAL:<br/><span class="active-tag">SUBSIDIES & WATER AI</span></div>
+      </div>
+    </div>
+    <button class="chatbot-open-btn" id="openChatbotBtn">💬 Open Chatbot</button>
+    <div class="sidebar-nav-menu">
+      <a href="index.html" class="sidebar-nav-item">📊 Fleet Dashboard</a>
+      <a href="market.html" class="sidebar-nav-item">📈 Mandi Prices</a>
+      <a href="farm_support.html" class="sidebar-nav-item">🌿 Farm Support</a>
+      <a href="yield_calculator.html" class="sidebar-nav-item">⚖️ Yield Calculator</a>
+      <a href="plant_growth.html" class="sidebar-nav-item">🌱 Plant Growth</a>
+      <a href="farm_intelligence.html" class="sidebar-nav-item active">🏛️ Subsidies & Water</a>
+      <a href="dashboard2.html" class="sidebar-nav-item">📋 Orchestration</a>
+    </div>
+    <div class="sidebar-bottom"></div>
+  </aside>
+
+  <!-- MAIN CONTENT -->
+  <main class="main">
+
+    <!-- PAGE HEADER -->
+    <div class="page-header">
+      <div class="page-header-left">
+        <div class="page-eyebrow">GOVERNMENT SCHEMES, WATER EFFICIENCY & FIELD INSPECTION</div>
+        <h1 class="page-title">Farmer Subsidies, Water Stress & Farm Inspector</h1>
+        <p class="page-desc">Access government farmer subsidies (up to 80% grants), detect crop water stress to lower irrigation costs and prevent water wastage, and upload field photos for automated AI inspection.</p>
+      </div>
+    </div>
+
+    <!-- SECTION 1: GOVERNMENT FARMER SUBSIDIES DIRECTORY -->
+    <div class="section-container" id="subsidies">
+      <div class="section-title-bar">
+        <span class="sec-icon">🏛️</span>
+        <h2>Government Subsidies & Farmer Support Schemes</h2>
+      </div>
+
+      <div class="card filter-bar-card">
+        <div class="sub-filter-row">
+          <div class="sub-search-wrap">
+            <input type="text" id="subSearchInput" placeholder="Search schemes (e.g. Solar Pump, Drip Irrigation, PM-KISAN, Tractor)..." class="custom-input"/>
+          </div>
+          <div class="sub-pills-row">
+            <button class="btn-sub-pill active" data-cat="all">All Schemes</button>
+            <button class="btn-sub-pill" data-cat="Irrigation">Irrigation & Water</button>
+            <button class="btn-sub-pill" data-cat="Solar">Solar & Green Energy</button>
+            <button class="btn-sub-pill" data-cat="Machinery">Machinery & Implements</button>
+            <button class="btn-sub-pill" data-cat="Income">Income Support</button>
+            <button class="btn-sub-pill" data-cat="Loan">Loan & Credit</button>
+            <button class="btn-sub-pill" data-cat="Insurance">Insurance</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="subsidies-grid" id="subsidiesGrid">
+        <div class="loading-state">⚡ Loading verified government subsidy schemes...</div>
+      </div>
+    </div>
+
+    <!-- SECTION 2: AI WATER STRESS & COST OPTIMIZER -->
+    <div class="section-container mt32" id="water-stress">
+      <div class="section-title-bar">
+        <span class="sec-icon">💧</span>
+        <h2>AI Water Stress Detection & Water Wastage Reduction</h2>
+      </div>
+
+      <div class="water-stress-grid">
+        <!-- FORM CARD -->
+        <div class="card ws-form-card">
+          <div class="card-title">💧 Input Field Moisture & Climate Telemetry</div>
+
+          <form id="waterStressForm" onsubmit="return false;">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label>SOIL MOISTURE (%) <span class="req">*</span></label>
+                <input type="number" id="wsMoisture" value="28" min="0" max="100" class="custom-input"/>
+              </div>
+              <div class="form-group">
+                <label>TEMPERATURE (°C)</label>
+                <input type="number" id="wsTemp" value="34" min="0" max="60" class="custom-input"/>
+              </div>
+            </div>
+
+            <div class="form-row-2 mt12">
+              <div class="form-group">
+                <label>RELATIVE HUMIDITY (%)</label>
+                <input type="number" id="wsHumidity" value="45" min="0" max="100" class="custom-input"/>
+              </div>
+              <div class="form-group">
+                <label>DAYS SINCE LAST WATERING</label>
+                <input type="number" id="wsDays" value="5" min="0" max="30" class="custom-input"/>
+              </div>
+            </div>
+
+            <div class="form-row-2 mt12">
+              <div class="form-group">
+                <label>SOIL TYPE</label>
+                <select id="wsSoilType" class="custom-select">
+                  <option value="Loam">Loam Soil (Balanced)</option>
+                  <option value="Clay">Clay Soil (High Retention)</option>
+                  <option value="Sandy">Sandy Soil (Fast Drainage)</option>
+                  <option value="Silt">Silt Soil</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label>FARM LAND AREA (ACRES)</label>
+                <input type="number" id="wsAcres" value="2.5" step="0.1" min="0.1" class="custom-input"/>
+              </div>
+            </div>
+
+            <button type="submit" class="btn-calculate-ws" id="calcWaterStressBtn">
+              🚀 Analyze Water Stress & Prevent Wastage
+            </button>
+          </form>
+        </div>
+
+        <!-- DIAGNOSTIC RESULTS CARD -->
+        <div class="card ws-result-card" id="wsResultCard">
+          <div class="card-title">📊 Water Stress Diagnostics & Cost Savings</div>
+
+          <div class="ws-status-badge" id="wsStatusBadge" style="background:#f1f5f9;color:#475569">
+            Enter field telemetry above to run water stress diagnostic
+          </div>
+
+          <!-- CWSI GAUGE METER -->
+          <div class="cwsi-meter-box">
+            <div class="cwsi-header">
+              <span class="cwsi-title">CROP WATER STRESS INDEX (CWSI)</span>
+              <span class="cwsi-val" id="cwsiValue">0.68</span>
+            </div>
+            <div class="cwsi-bar-wrap">
+              <div class="cwsi-bar-fill" id="cwsiBarFill" style="width:68%;background:#f59e0b"></div>
+            </div>
+            <div class="cwsi-scale">
+              <span>0.0 (No Stress)</span>
+              <span>0.5 (Moderate)</span>
+              <span>1.0 (Critical Drought)</span>
+            </div>
+          </div>
+
+          <!-- SAVINGS METRICS ROW -->
+          <div class="ws-metrics-row mt16">
+            <div class="wsm-box">
+              <div class="wsm-label">WATER WASTAGE PREVENTED</div>
+              <div class="wsm-val green" id="resWaterSaved">35,000 L</div>
+              <div class="wsm-sub">Saved vs Flood Irrigation</div>
+            </div>
+            <div class="wsm-box">
+              <div class="wsm-label">INPUT PUMPING COST SAVED</div>
+              <div class="wsm-val gold" id="resCostSaved">₹1,125</div>
+              <div class="wsm-sub">Electricity / Diesel Savings</div>
+            </div>
+          </div>
+
+          <!-- ACTION ADVICE BOX -->
+          <div class="action-advice-box mt16">
+            <div class="aab-title">💧 Precision Watering Recommendation</div>
+            <div class="aab-text" id="resActionAdvice">
+              Run water stress calculation above to view exact watering volume and cost savings.
+            </div>
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <!-- SECTION 3: FARM IMAGE UPLOAD & FIELD INSPECTOR -->
+    <div class="section-container mt32" id="farm-inspector">
+      <div class="section-title-bar">
+        <span class="sec-icon">📸</span>
+        <h2>Farm Image Upload & Aerial Field Inspector</h2>
+      </div>
+
+      <div class="farm-inspector-grid">
+        <!-- UPLOAD CARD -->
+        <div class="card inspector-upload-card">
+          <div class="card-title">📤 Upload Farm / Drone / Field Photo</div>
+          <p class="inspect-desc">Upload a photo of your field or crop canopy to visually inspect crop health, canopy density, and dry soil patches.</p>
+
+          <div class="farm-drop-area" id="farmDropArea">
+            <input type="file" id="farmPhotoInput" accept="image/*" class="file-input"/>
+            <div class="upload-placeholder" id="farmPlaceholder">
+              <span class="up-icon">📷</span>
+              <span class="up-text">Click or drag your farm photo here</span>
+              <span class="up-sub">Supports Drone, Satellite, or Phone Field Photos</span>
+            </div>
+            <img id="farmPhotoPreview" class="photo-preview hidden" alt="Uploaded Farm Field Photo"/>
+          </div>
+
+          <div class="form-group mt16">
+            <label>CROP TYPE IN FIELD</label>
+            <select id="inspectCropSelect" class="custom-select">
+              <option value="Tomato">Tomato Field</option>
+              <option value="Wheat">Wheat Field</option>
+              <option value="Paddy (Rice)">Paddy / Rice Field</option>
+              <option value="Cotton">Cotton Field</option>
+              <option value="Green Chilli">Chilli Field</option>
+            </select>
+          </div>
+
+          <button class="btn-inspect-farm" id="inspectFarmBtn">
+            🔍 Inspect Farm Field Photo
+          </button>
+        </div>
+
+        <!-- INSPECTOR DIAGNOSTICS CARD -->
+        <div class="card inspector-results-card">
+          <div class="card-title">🔬 Field Diagnostic & Health Inspection Report</div>
+
+          <div class="inspect-metrics-grid">
+            <div class="im-box">
+              <div class="im-label">CANOPY COVERAGE</div>
+              <div class="im-val" id="resCanopy">78.5%</div>
+              <div class="im-sub">Foliage Density</div>
+            </div>
+            <div class="im-box">
+              <div class="im-label">FIELD HEALTH SCORE</div>
+              <div class="im-val green" id="resHealthIndex">84 / 100</div>
+              <div class="im-sub">High Productivity</div>
+            </div>
+            <div class="im-box">
+              <div class="im-label">WEED DENSITY</div>
+              <div class="im-val blue" id="resWeedDensity">Low (4.2%)</div>
+              <div class="im-sub">Weed Pressure</div>
+            </div>
+          </div>
+
+          <div class="agronomy-notes-box mt16">
+            <div class="anb-title">✦ Visual Field Diagnostic Notes</div>
+            <ul class="anb-list" id="anbList">
+              <li>🟢 **Canopy Density**: Crop foliage coverage is at 78.5%, indicating healthy vegetative biomass development.</li>
+              <li>🟡 **Moisture Deficit Zone**: Minor dry soil patch detected in North-West grid sector. Recommend localized drip pulse.</li>
+              <li>🛡️ **Weed Pressure**: Weed density is low (4.2%). No immediate chemical herbicide intervention required.</li>
+              <li>🌱 **Yield Potential**: Field health index is rated 84/100 (High Productivity Potential).</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </main>
+</div>
+
+<script src="farm_intelligence.js"></script>
+</body>
+</html>

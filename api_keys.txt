@@ -8,7 +8,3 @@ DATA_GOV_API_KEY=579b464db66ec23bdd00000107479de161144d2a6faf0454f929b73d
 
 # Optional: Mistral LLM API Key (for advanced AI agronomy chatbot advice)
 MISTRAL_API_KEY=your_mistral_api_key_here
-
-# Google OAuth: paste newly rotated credentials here. Do not commit real secrets.
-GOOGLE_CLIENT_ID=your_google_client_id_here
-GOOGLE_CLIENT_SECRET=your_google_client_secret_here

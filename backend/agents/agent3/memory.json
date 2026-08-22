@@ -1,35 +1,5 @@
 [
   {
-    "timestamp": "2026-07-12T14:32:46.273332",
-    "run": {
-      "strategy": "optimize",
-      "budget": 4239.0,
-      "water": 2660.0,
-      "risk_score": 0,
-      "plan": {
-        "field_id": "field_1",
-        "actions": [
-          {
-            "type": "scouting",
-            "cost_inr": 300.0,
-            "water_liters": 0.0,
-            "start": "2026-07-12T14:32:42.879396",
-            "end": "2026-07-12T20:32:42.879396",
-            "notes": "Risk: low_risk | Severity: 0.10 | Confidence: 0.80"
-          }
-        ],
-        "total_cost_inr": 300.0,
-        "total_water_liters": 0.0,
-        "expected_risk_reduction": 0.04,
-        "status": "Optimal",
-        "warnings": [],
-        "generated_at": "2026-07-12T14:32:42.892404"
-      },
-      "actions": {}
-    },
-    "insight": "### **Analysis for Current Run (`optimize`, Risk Score = 0)**\n\n#### **Improvement Suggestions**\n1. **Skip Scouting Entirely** \u2013 Zero risk means **no action needed**; budget (4,239 INR) and water (2,660L) are wasted.\n2. **Default to No-Action** \u2013 For `risk_score = 0`, **no intervention** is optimal; reallocate funds to preventive maintenance if risks are uncertain.\n\n#### **Mistakes to Avoid**\n- **Over-Scouting for Zero Risk** \u2013 300 INR spent on unnecessary monitoring.\n- **Ignoring Efficiency** \u2013 Unused resources (budget/water) could fund proactive checks.\n\n#### **Optimization Ideas**\n- **Automate Zero-Risk Detection** \u2013 Skip scouting if `risk_score \u2264 0.5`.\n- **Dynamic Thresholds** \u2013 Use *optimize* only for **marginal risks (0.5\u20131.0)**; default to *no-action* for **risk = 0**.\n- **Preventive Maintenance** \u2013 Redirect funds to **soil checks/early pest prevention** if risks are low but uncertain."
-  },
-  {
     "timestamp": "2026-07-12T14:34:36.324345",
     "run": {
       "strategy": "optimize",
@@ -1932,5 +1902,61 @@
       }
     },
     "insight": "### **Analysis & Recommendations (Risk Score 9, Extreme Heat + Multi-Stress)**\n\n#### **Key Issues:**\n1. **Insufficient Water Allocation** \u2013 Only **5kL** (needs **20kL+** for risk 9).\n2. **Overlapping Reactive Actions** \u2013 Soil amendment/pesticide (low-severity) conflicts with **critical heat/irrigation**.\n3. **No Proactive Defense** \u2013 Missing **sensors, shade, or cooling** despite extreme risk.\n4. **Budget Underutilization** \u2013 **$46k spent** (10% of $45.6k budget) on reactive fixes.\n\n#### **Improvement Suggestions:**\n\u2705 **Double Irrigation (20kL)** + **soil moisture sensors (INR 1k)** for real-time adjustments.\n\u2705 **Add Heat Mitigation:**\n   - **Shade cloth (INR 5k)** or **cooling fans (INR 3k)**.\n\u2705 **Replace Pesticide:** **Biological controls (INR 1.5k)** or **resistant seeds (INR 2k)**.\n\u2705 **Dynamic Prioritization:**\n   **Scouting \u2192 Immediate 20kL irrigation \u2192 Soil amendment \u2192 Pesticide (if needed)**.\n\n#### **Mistakes to Avoid:**\n\u274c Ignore **critical heat/water stress** (5kL insufficient).\n\u274c Over-rely on **low-severity interventions** (prioritize heat/irrigation).\n\u274c **No proactive defense** (missing sensors/shade).\n\u274c **Single-threaded approach** (multi-stress needs layered defense).\n\n#### **Optimization Ideas:**\n\ud83d\udd39 **Budget Efficiency:** Allocate **INR 10k** for **sensors + shade + cooling fans** (total **INR 15k**).\n\ud83d\udd39 **Emergency Plan:** **20kL irrigation + sensors + shade (INR 10k)** for **risk \u22659**.\n\ud83d\udd39 **Action Chaining:** **Real-time monitoring \u2192 Adjust irrigation \u2192 Nutrient check \u2192 Pesticide (if needed)**."
+  },
+  {
+    "timestamp": "2026-08-17T18:02:26.269865",
+    "run": {
+      "strategy": "optimize",
+      "budget": 24500.0,
+      "water": 12500.0,
+      "risk_score": 8,
+      "plan": {
+        "field_id": "field_1",
+        "actions": [
+          {
+            "type": "irrigate",
+            "cost_inr": 800.0,
+            "water_liters": 5000.0,
+            "start": "2026-08-17T18:02:25.640379",
+            "end": "2026-08-17T20:02:25.640379",
+            "notes": "Risk: water_stress | Severity: 0.70 | Confidence: 0.78"
+          },
+          {
+            "type": "scouting",
+            "cost_inr": 300.0,
+            "water_liters": 0.0,
+            "start": "2026-08-18T04:02:25.640379",
+            "end": "2026-08-18T06:02:25.640379",
+            "notes": "Risk: anomaly | Severity: 0.61 | Confidence: 0.66"
+          },
+          {
+            "type": "spray_pesticide",
+            "cost_inr": 1500.0,
+            "water_liters": 200.0,
+            "start": "2026-08-17T22:02:25.640379",
+            "end": "2026-08-18T00:02:25.640379",
+            "notes": "Risk: pest | Severity: 0.38 | Confidence: 0.55"
+          },
+          {
+            "type": "soil_amendment",
+            "cost_inr": 2000.0,
+            "water_liters": 0.0,
+            "start": "2026-08-18T02:02:25.640379",
+            "end": "2026-08-18T04:02:25.640379",
+            "notes": "Risk: anomaly | Severity: 0.61 | Confidence: 0.66"
+          }
+        ],
+        "total_cost_inr": 4600.0,
+        "total_water_liters": 5200.0,
+        "expected_risk_reduction": 0.939,
+        "status": "Optimal",
+        "warnings": [],
+        "generated_at": "2026-08-17T18:02:26.203736"
+      },
+      "actions": {
+        "irrigation": "Soil moisture adequate \u2192 Maintain normal irrigation."
+      }
+    },
+    "insight": "Learning unavailable (LLM failed)"
   }
 ]
